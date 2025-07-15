@@ -1,0 +1,4 @@
+/* Custom component styles */
+.gradient-text {
+  @apply bg-gradient-primary bg-clip-text text-transparent;
+}
