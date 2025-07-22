@@ -1,16 +1,12 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
-import { CTA } from "@/components/CTA";
+import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <Features />
-      <CTA />
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <HeroSection />
       <Footer />
     </div>
   );
