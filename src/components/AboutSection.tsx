@@ -25,33 +25,36 @@ export const AboutSection = () => {
           </h2>
           <div className="mb-6">
             <img
-              src={"/random.jpeg"}
+              src={"/founder_pic.JPG"}
               alt="Senitac Founders"
-              className="w-full max-w-2xl rounded-xl shadow-lg object-cover"
+              className="w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-orange-500/25"
               style={{ aspectRatio: '16/7', objectPosition: 'center left' }}
+              loading="lazy"
             />
           </div>
           <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
             Hi,
           </p>
           <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            We're the founders of <span className="bg-gradient-primary bg-clip-text text-transparent">Senitac</span>, a full-stack, AI accountancy. Our team of AI agents books entries, reconciles across systems, runs the general ledger, chases down missing data + missing payments, and produces evidence trails that external auditors can query in <span className="bg-gradient-primary bg-clip-text text-transparent">minutes</span>, not months. And that is just the <span className="bg-gradient-primary bg-clip-text text-transparent">beginning</span>.   
+            We're the founders of <span className="bg-gradient-primary bg-clip-text text-transparent">Senitac</span>, a full-stack, AI accountancy. 
           </p>
           <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            Ultimately what we are solving is an data problem. <span className="bg-gradient-primary bg-clip-text text-transparent">Data is king</span>. It is what individuals, businesses, and industries run on - yet a lot of it is still re-typed, re-emailed, re-checked manually or is simply just missing. It is a huge, messy and high-friction problem that is costing time, money and, worst, our confidence 
-            (There's literally a $243 billion audit industry, to make sure we have the right information.) <span className="bg-gradient-primary bg-clip-text text-transparent">Why not solve it directly at the root? </span> Making all downstream tasks a simple click of a button.
+            <span className="bg-gradient-primary bg-clip-text text-transparent">What that means:</span> Our team of AI agents pull raw data directly from your systems (think bank transactions, email, invoices, spreadsheets) and turn it into a continuously-reconciled ledger, so bookkeeping, chasing missing payments, audit evidence and tax classifications are done automatically.
           </p>
           <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            And that is why we are reimagining accounting by creating a system that understands your business processes and proactively ensures <span className="bg-gradient-primary bg-clip-text text-transparent"> accurate, transparent, and free-flowing data.</span>
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Why it matters:</span> Clean, verifiable data at the source eliminates re-typing, back-and-forth emails, and months-long audits. Finance teams get instant books; auditors get evidence trails on demand.
+          </p>
+          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> Vision:</span> Zero-friction finance done by AI agents. Data flows once, stays accurate forever, and every downstream financial task becomes a click. So your business can move from hindsight to real-time decision making.
           </p>
           <a
               href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-xl px-8 py-4 mb-8 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-primary text-primary-foreground flex items-center hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+              className="rounded-xl px-8 py-4 mb-8 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105"
               style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}
             >
-              Get to know more
+              Talk to us
               <Calendar className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
