@@ -7,7 +7,7 @@ export const AboutSection = () => {
   const isImageLoaded = useImagePreloader(imageUrl);
 
   return (
-    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
+    <section className="relative min-h-screen w-full bg-gradient-hero overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
       {/* Background glow effects for consistency */}
       {/* Removed or reduced top-left glow */}
       {/* <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[180px] pointer-events-none"></div> */}
@@ -31,7 +31,7 @@ export const AboutSection = () => {
               <img
                 src={imageUrl}
                 alt="Senitac Founders"
-                className="w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-orange-500/25 animate-fade-in"
+                className="relative w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in image-glow"
                 style={{ aspectRatio: '16/7', objectPosition: 'center left' }}
               />
             ) : (

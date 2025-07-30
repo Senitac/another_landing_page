@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export const VisionSection = () => {
   return (
-    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
+    <section className="relative min-h-screen w-full bg-gradient-hero overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
       {/* Background glow effects for consistency */}
       {/* Removed or reduced top-left glow */}
       {/* <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[180px] pointer-events-none"></div> */}
