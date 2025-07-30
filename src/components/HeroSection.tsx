@@ -44,30 +44,30 @@ export const HeroSection = () => {
           {/* Demo video expandable section */}
           <div
             id="demo-video-section"
-            className={`overflow-hidden transition-all duration-500 ${showDemo ? 'max-h-[600px] mt-4' : 'max-h-0'} w-full`}
+            className={`overflow-hidden transition-all duration-500 ${showDemo ? 'max-h-[80vh] mt-6' : 'max-h-0'} w-full`}
             style={{
               opacity: showDemo ? 1 : 0,
               pointerEvents: showDemo ? 'auto' : 'none',
             }}
           >
-                        <div className="bg-black/80 rounded-xl p-4 flex flex-col items-center gap-4 shadow-lg border border-orange-500/20 relative">
+            <div className="relative">
               <button
                 onClick={() => setShowDemo(false)}
-                className="absolute top-2 right-2 z-10 p-2 rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-black/70 text-white hover:bg-black/90 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"
                 aria-label="Close demo"
               >
-                <X className="h-4 w-4" />
+                <X className="h-5 w-5" />
               </button>
-              <div className="w-full aspect-video max-w-2xl">
+              <div className="w-full aspect-video max-w-7xl">
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/JOYSDqJdiro?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/80s7QQzwSyo?rel=0&modestbranding=1&vq=hd1080"
                   title="Demo Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="w-full h-full rounded-lg"
+                  className="w-full h-full"
                   loading="lazy"
                   sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 ></iframe>
