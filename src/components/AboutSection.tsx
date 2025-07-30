@@ -1,8 +1,11 @@
-import { Calendar} from "lucide-react";
+import { Calendar } from "lucide-react";
+import { useImagePreloader } from "../hooks/useImagePreloader";
 
-
+const imageUrl = "/founder_pic.JPG";
 
 export const AboutSection = () => {
+  const isImageLoaded = useImagePreloader(imageUrl);
+
   return (
     <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
       {/* Background glow effects for consistency */}
@@ -24,13 +27,16 @@ export const AboutSection = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Us</span>
           </h2>
           <div className="mb-6">
-            <img
-              src={"/founder_pic.JPG"}
-              alt="Senitac Founders"
-              className="w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-orange-500/25"
-              style={{ aspectRatio: '16/7', objectPosition: 'center left' }}
-              loading="lazy"
-            />
+           {isImageLoaded ? (
+              <img
+                src={imageUrl}
+                alt="Senitac Founders"
+                className="w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-orange-500/25 animate-fade-in"
+                style={{ aspectRatio: '16/7', objectPosition: 'center left' }}
+              />
+            ) : (
+              <div className="w-full max-w-2xl rounded-xl bg-neutral-800/50 animate-pulse" style={{ aspectRatio: '16/7' }} />
+            )}
           </div>
           <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
             Hi,
@@ -61,4 +67,4 @@ export const AboutSection = () => {
       </div>
     </section>
   );
-}
+};
