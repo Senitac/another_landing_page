@@ -7,9 +7,9 @@ export const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo-icon.svg"
+                src="/senitac_logo_2048.png"
                 alt="Senitac Logo"
-                className="h-8 w-8"
+                className="h-10 w-10"
               />
               <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Senitac

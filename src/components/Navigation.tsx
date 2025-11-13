@@ -13,9 +13,9 @@ export const Navigation = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-0 transition-opacity hover:opacity-80">
               <img
-                src="/logo-icon.svg"
+                src="/senitac_logo_2048.png"
                 alt="Senitac Logo"
-                className="h-8 w-8"
+                className="h-10 w-10"
               />
               <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Senitac
