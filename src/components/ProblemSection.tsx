@@ -23,16 +23,10 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 border-t border-b border-white/10 relative">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"></div>
-        <div className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-white/10"></div>
-      </div>
-
+    <section className="py-20 relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
-        <div className="mx-auto px-4 md:px-12 pb-12 border-b border-dashed border-white/10">
+        <div className="mx-auto px-4 md:px-12 pb-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
               Finance teams waste <span className="bg-gradient-primary bg-clip-text text-transparent">hundreds of hours</span>
@@ -71,7 +65,7 @@ export const ProblemSection = () => {
 
                 {/* Divider (except for last item) */}
                 {index < problems.length - 1 && (
-                  <div className="border-t border-dashed border-white/10"></div>
+                  <div className="my-8"></div>
                 )}
               </div>
             ))}
