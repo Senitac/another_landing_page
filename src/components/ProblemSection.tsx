@@ -4,21 +4,21 @@ export const ProblemSection = () => {
   const problems = [
     {
       icon: Mail,
-      title: "Manual data entry, everywhere",
+      title: "60% of staff time wasted on data entry",
       description:
-        "Bank transactions, invoices, emails, spreadsheets—accountants re-type the same data across multiple systems. Hours wasted on copy-paste work that should be automatic.",
+        "Your finance team spends the majority of their day re-typing bank transactions, invoices, and receipts across disconnected systems. Strategic work gets pushed aside for endless copy-paste.",
     },
     {
       icon: Clock,
-      title: "Reconciliation takes days, not hours",
+      title: "Months to close books and prepare for audit",
       description:
-        "Month-end close is a painful manual process of matching transactions, chasing receipts, and fixing errors. What should take hours stretches into days of tedious work.",
+        "Month-end becomes month-long as teams manually match transactions, hunt for missing receipts, and chase evidence via back-and-forth emails. What should be automated takes weeks of tedious reconciliation.",
     },
     {
       icon: AlertCircle,
-      title: "Disconnected systems create blind spots",
+      title: "340K accountant shortage—yet manual work grows",
       description:
-        "Without real-time visibility across bank accounts, ERPs, and invoices, finance teams are always looking in the rearview mirror. By the time they see problems, it's too late.",
+        "A global shortage of accountants means fewer hands to do more work. Yet the manual burden keeps growing with no end in sight. Without real-time visibility, finance teams are always reacting, never planning ahead.",
     },
   ];
 
@@ -35,10 +35,10 @@ export const ProblemSection = () => {
         <div className="mx-auto px-4 md:px-12 pb-12 border-b border-dashed border-white/10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
-              Finance teams waste <span className="bg-gradient-primary bg-clip-text text-transparent">hundreds of hours</span>
+              Your finance team is drowning in <span className="bg-gradient-primary bg-clip-text text-transparent">manual work</span>
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Traditional tools just shift the burden—they don't solve it.
+              Re-typing invoices. Chasing receipts. Reconciling across legacy systems. This is the reality for finance teams today—and traditional tools only shift the burden.
             </p>
           </div>
         </div>

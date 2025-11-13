@@ -8,13 +8,6 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-6">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-              <span className="text-sm font-medium text-white">YC F25</span>
-              <span className="text-white/60">•</span>
-              <span className="text-sm text-white/80">AI Accounting</span>
-            </div>
-
             {/* Headline */}
             <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
               The <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Full-Stack</span><br />
@@ -65,17 +58,6 @@ export const HeroSection = () => {
                   sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 ></iframe>
               </div>
-            </div>
-
-            {/* Floating Stats */}
-            <div className="absolute -top-4 -right-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
-              <div className="text-xs text-white/60 mb-1">Accuracy</div>
-              <div className="text-2xl font-bold text-green-400">99.8%</div>
-            </div>
-
-            <div className="absolute -bottom-4 -left-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
-              <div className="text-xs text-white/60 mb-1">Time Saved</div>
-              <div className="text-2xl font-bold text-orange-400">80%</div>
             </div>
           </div>
         </div>
