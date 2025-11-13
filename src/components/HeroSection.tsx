@@ -3,7 +3,7 @@ import { Calendar } from "lucide-react";
 export const HeroSection = () => {
 
   return (
-    <section className="relative w-full overflow-hidden pt-32 md:pt-40 lg:pt-48 pb-8 px-6">
+    <section className="relative w-full overflow-hidden min-h-screen flex items-center px-6">
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
