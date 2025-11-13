@@ -23,7 +23,7 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section className="pt-8 pb-20 relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="mx-auto px-4 md:px-12 pb-12">
