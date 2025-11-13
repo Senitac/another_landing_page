@@ -1,0 +1,38 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Simplified icon version for favicons and small sizes -->
+  <!-- Left loop -->
+  <circle cx="85" cy="100" r="30" fill="none" stroke="url(#icon-gradient)" stroke-width="8"/>
+  <circle cx="85" cy="100" r="38" fill="none" stroke="url(#icon-gradient)" stroke-width="6"/>
+  <circle cx="85" cy="100" r="45" fill="none" stroke="url(#icon-gradient)" stroke-width="4"/>
+
+  <!-- Right loop -->
+  <circle cx="171" cy="100" r="30" fill="none" stroke="url(#icon-gradient)" stroke-width="8"/>
+  <circle cx="171" cy="100" r="38" fill="none" stroke="url(#icon-gradient)" stroke-width="6"/>
+  <circle cx="171" cy="100" r="45" fill="none" stroke="url(#icon-gradient)" stroke-width="4"/>
+
+  <!-- Bottom left loop -->
+  <circle cx="85" cy="156" r="30" fill="none" stroke="url(#icon-gradient)" stroke-width="8"/>
+  <circle cx="85" cy="156" r="38" fill="none" stroke="url(#icon-gradient)" stroke-width="6"/>
+  <circle cx="85" cy="156" r="45" fill="none" stroke="url(#icon-gradient)" stroke-width="4"/>
+
+  <!-- Bottom right loop -->
+  <circle cx="171" cy="156" r="30" fill="none" stroke="url(#icon-gradient)" stroke-width="8"/>
+  <circle cx="171" cy="156" r="38" fill="none" stroke="url(#icon-gradient)" stroke-width="6"/>
+  <circle cx="171" cy="156" r="45" fill="none" stroke="url(#icon-gradient)" stroke-width="4"/>
+
+  <!-- Center connecting strokes -->
+  <line x1="105" y1="70" x2="151" y2="70" stroke="url(#icon-gradient)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="105" y1="83" x2="151" y2="83" stroke="url(#icon-gradient)" stroke-width="8" stroke-linecap="round"/>
+  <line x1="105" y1="174" x2="151" y2="174" stroke="url(#icon-gradient)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="105" y1="186" x2="151" y2="186" stroke="url(#icon-gradient)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Center vertical connection -->
+  <line x1="128" y1="90" x2="128" y2="166" stroke="url(#icon-gradient)" stroke-width="12" stroke-linecap="round"/>
+</svg>

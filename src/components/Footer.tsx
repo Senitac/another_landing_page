@@ -6,6 +6,11 @@ export const Footer = () => {
           {/* Column 1: Logo + Description */}
           <div>
             <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo-icon.svg"
+                alt="Senitac Logo"
+                className="h-8 w-8"
+              />
               <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Senitac
               </div>

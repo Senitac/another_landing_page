@@ -11,8 +11,15 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent focus-visible:outline-none focus-visible:ring-0 transition-colors">
-              Senitac
+            <a href="/" className="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-0 transition-opacity hover:opacity-80">
+              <img
+                src="/logo-icon.svg"
+                alt="Senitac Logo"
+                className="h-8 w-8"
+              />
+              <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                Senitac
+              </span>
             </a>
           </div>
 

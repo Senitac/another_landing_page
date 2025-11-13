@@ -1,0 +1,40 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="senitac-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main infinity knot symbol -->
+  <path d="M256 64C176 64 112 128 112 208C112 256 132 296 164 324C132 352 112 392 112 440C112 488 144 528 192 544C144 528 112 488 112 440C112 392 132 352 164 324C196 296 240 280 256 280C272 280 316 296 348 324C380 352 400 392 400 440C400 488 368 528 320 544C368 528 400 488 400 440C400 392 380 352 348 324C380 296 400 256 400 208C400 128 336 64 256 64Z" fill="url(#senitac-gradient)" stroke="white" stroke-width="12"/>
+
+  <!-- Left loop -->
+  <circle cx="170" cy="200" r="60" fill="none" stroke="url(#senitac-gradient)" stroke-width="16"/>
+  <circle cx="170" cy="200" r="75" fill="none" stroke="url(#senitac-gradient)" stroke-width="12"/>
+  <circle cx="170" cy="200" r="90" fill="none" stroke="url(#senitac-gradient)" stroke-width="8"/>
+
+  <!-- Right loop -->
+  <circle cx="342" cy="200" r="60" fill="none" stroke="url(#senitac-gradient)" stroke-width="16"/>
+  <circle cx="342" cy="200" r="75" fill="none" stroke="url(#senitac-gradient)" stroke-width="12"/>
+  <circle cx="342" cy="200" r="90" fill="none" stroke="url(#senitac-gradient)" stroke-width="8"/>
+
+  <!-- Bottom left loop -->
+  <circle cx="170" cy="312" r="60" fill="none" stroke="url(#senitac-gradient)" stroke-width="16"/>
+  <circle cx="170" cy="312" r="75" fill="none" stroke="url(#senitac-gradient)" stroke-width="12"/>
+  <circle cx="170" cy="312" r="90" fill="none" stroke="url(#senitac-gradient)" stroke-width="8"/>
+
+  <!-- Bottom right loop -->
+  <circle cx="342" cy="312" r="60" fill="none" stroke="url(#senitac-gradient)" stroke-width="16"/>
+  <circle cx="342" cy="312" r="75" fill="none" stroke="url(#senitac-gradient)" stroke-width="12"/>
+  <circle cx="342" cy="312" r="90" fill="none" stroke="url(#senitac-gradient)" stroke-width="8"/>
+
+  <!-- Center connecting strokes -->
+  <line x1="210" y1="140" x2="302" y2="140" stroke="url(#senitac-gradient)" stroke-width="20" stroke-linecap="round"/>
+  <line x1="210" y1="165" x2="302" y2="165" stroke="url(#senitac-gradient)" stroke-width="16" stroke-linecap="round"/>
+  <line x1="210" y1="347" x2="302" y2="347" stroke="url(#senitac-gradient)" stroke-width="20" stroke-linecap="round"/>
+  <line x1="210" y1="372" x2="302" y2="372" stroke="url(#senitac-gradient)" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Center vertical connection -->
+  <line x1="256" y1="180" x2="256" y2="332" stroke="url(#senitac-gradient)" stroke-width="24" stroke-linecap="round"/>
+</svg>
