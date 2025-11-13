@@ -60,14 +60,11 @@ export const HowItWorksSection = () => {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connecting line (desktop only) */}
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="flex">
               {/* Step card */}
-              <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group">
+              <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group flex-1">
                 {/* Step number */}
                 <div className="absolute -top-4 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-bold">
                   {step.number}
@@ -101,25 +98,6 @@ export const HowItWorksSection = () => {
                 {/* Hover effect */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
               </div>
-
-              {/* Arrow connector (desktop only, not on last item) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 -right-4 text-orange-500/30">
-                  <svg
-                    className="w-8 h-8"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              )}
             </div>
           ))}
         </div>
