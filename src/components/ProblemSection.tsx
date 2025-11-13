@@ -4,21 +4,21 @@ export const ProblemSection = () => {
   const problems = [
     {
       icon: Mail,
-      title: "Manual data entry, everywhere",
+      title: "Chasing receipts and re-typing invoices",
       description:
-        "Bank transactions, invoices, emails, spreadsheets—accountants re-type the same data across multiple systems. Hours wasted on copy-paste work that should be automatic.",
+        "Accountants waste entire afternoons hunting down missing receipts and manually re-entering invoice data across different legacy systems. What should be automatic becomes hours of tedious copy-paste work.",
     },
     {
       icon: Clock,
-      title: "Reconciliation takes days, not hours",
+      title: "60% of time spent on repetitive data entry",
       description:
-        "Month-end close is a painful manual process of matching transactions, chasing receipts, and fixing errors. What should take hours stretches into days of tedious work.",
+        "Finance teams drown in manual tasks: sorting emails, keying transactions into ERPs, matching bank statements, chasing approvals. Month-end close stretches into days instead of hours because nothing flows automatically.",
     },
     {
       icon: AlertCircle,
-      title: "Disconnected systems create blind spots",
+      title: "No way to monitor all your data streams",
       description:
-        "Without real-time visibility across bank accounts, ERPs, and invoices, finance teams are always looking in the rearview mirror. By the time they see problems, it's too late.",
+        "Without automation that starts at the source, businesses have no real-time view across bank feeds, invoices, emails, contracts, and spreadsheets. By the time you spot issues, it's too late.",
     },
   ];
 
@@ -29,10 +29,10 @@ export const ProblemSection = () => {
         <div className="mx-auto px-4 md:px-12 pb-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
-              Finance teams waste <span className="bg-gradient-primary bg-clip-text text-transparent">hundreds of hours</span>
+              There's a <span className="bg-gradient-primary bg-clip-text text-transparent">global shortage</span> of accountants
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Traditional tools just shift the burden—they don't solve it.
+              And it's getting worse. The industry norm is wasting time on work that should never be manual in the first place.
             </p>
           </div>
         </div>

@@ -4,24 +4,24 @@ export const SolutionSection = () => {
   const capabilities = [
     {
       icon: Database,
-      title: "Automated Data Ingestion",
+      title: "Forward-Deployed Data Ingestion",
       description:
-        "Connect bank accounts, email, invoices, and spreadsheets. Our AI pulls everything automatically—no manual data entry, ever.",
-      features: ["Direct bank connections", "Invoice OCR", "Email parsing", "Spreadsheet sync"],
+        "We don't wait for messy data to hit your ledger. Our platform plugs directly into every raw data feed—bank accounts, email, invoices, contracts, ERPs—and pulls everything automatically.",
+      features: ["Direct bank connections", "Email & invoice parsing", "ERP system sync", "Spreadsheet imports"],
     },
     {
       icon: RefreshCw,
-      title: "Continuous Reconciliation",
+      title: "Continuous AI Reconciliation",
       description:
-        "AI reconciles transactions in real-time, not monthly. Your books are always current, and month-end becomes a one-click review.",
-      features: ["99%+ auto-matching", "Real-time updates", "Discrepancy detection", "Instant ledger sync"],
+        "Our agents reconcile transactions in real-time as they happen, not at month-end. Your books stay current, and agents learn your chart of accounts and business logic automatically.",
+      features: ["99%+ auto-matching", "Real-time processing", "Intelligent categorization", "Anomaly detection"],
     },
     {
       icon: Shield,
-      title: "Audit-Ready Evidence",
+      title: "Audit-Ready Evidence Graph",
       description:
-        "Every transaction has full context and evidence trails. Receipts, emails, and confirmations are automatically attached and organized.",
-      features: ["Auto evidence capture", "Tax classification", "Compliance checks", "One-click exports"],
+        "Every line item in your accounts has full evidence trails—receipts, emails, confirmations, and logs of all agent actions. One click to export everything auditors need.",
+      features: ["Complete audit trails", "Auto evidence capture", "Tax classifications", "Compliance checks"],
     },
   ];
 
@@ -38,10 +38,10 @@ export const SolutionSection = () => {
             AI-POWERED SOLUTION
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
-            Meet your <span className="bg-gradient-primary bg-clip-text text-transparent">AI accounting team</span>
+            Where competitors optimize workflows, <span className="bg-gradient-primary bg-clip-text text-transparent">we eliminate the manual chain</span>
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            AI agents that work 24/7 to keep your books clean and audit-ready.
+            Most automation layers on top of messy, manually-entered data. We start at the source—ensuring your foundation is always trustworthy.
           </p>
         </div>
 

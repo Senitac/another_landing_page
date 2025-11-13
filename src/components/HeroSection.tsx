@@ -11,12 +11,12 @@ export const HeroSection = () => {
             {/* Headline */}
             <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
               The <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Full-Stack</span><br />
-              AI Accountancy
+              AI Accounting Firm
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-white/70 leading-relaxed max-w-xl">
-              Building a new ecosystem for AI agents to do accounting.
+              AI agents that start at the source—ingesting raw data from your bank, email, and systems—then continuously reconcile everything. One accountant. 20× more clients.
             </p>
 
             {/* CTA Button */}
