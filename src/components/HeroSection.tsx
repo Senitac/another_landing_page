@@ -80,19 +80,20 @@ export const HeroSection = () => {
               The <span className="bg-gradient-primary bg-clip-text text-transparent">Full-stack</span>
             </span>
             <span className="font-semibold text-[clamp(2rem,5vw,3.5rem)] text-foreground leading-tight tracking-tight drop-shadow-xl text-left" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif', fontWeight: 600 }}>
-              AI Accountancy 
+              AI Accountancy
             </span>
-            
+
             {/* Paragraph and CTA vertically stacked below headline */}
             <div className="flex flex-col gap-6 mt-6">
-              <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg text-left max-w-md md:max-w-lg lg:max-w-xl" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                Building a new ecosystem for AI agents to do accounting.  
+              <p className="text-white/90 text-[clamp(1rem,1.3vw,1.15rem)] leading-relaxed drop-shadow-lg text-left max-w-md md:max-w-lg lg:max-w-2xl" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                AI agents that plug into your raw data feeds and maintain continuously-reconciled ledgers.
+                So bookkeeping, payment chasing, audit trails, and tax filings happen automatically.
               </p>
             <a
-              href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
+              href="https://calendly.com/nitanshu15/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-xl px-8 py-4 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105 mb-16"
+              className="rounded-xl px-8 py-4 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105"
               style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}
             >
               Chat with us

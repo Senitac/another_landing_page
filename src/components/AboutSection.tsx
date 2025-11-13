@@ -38,21 +38,52 @@ export const AboutSection = () => {
               <div className="w-full max-w-2xl rounded-xl bg-neutral-800/50 animate-pulse" style={{ aspectRatio: '16/7' }} />
             )}
           </div>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            Hi,
+          <p className="text-white/90 text-[clamp(1rem,1.2vw,1.15rem)] leading-relaxed drop-shadow-lg mb-4" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+            We're Nitanshu and Sebastian, the founders of <span className="bg-gradient-primary bg-clip-text text-transparent font-semibold">Senitac</span>.
           </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            We're the founders of <span className="bg-gradient-primary bg-clip-text text-transparent">Senitac</span>, a full-stack, AI accountancy. 
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent">What that means:</span> Our team of AI agents pull raw data directly from your systems (think bank transactions, email, invoices, spreadsheets) and turn it into a continuously-reconciled ledger, so bookkeeping, chasing missing payments, audit evidence and tax classifications are done automatically.
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Why it matters:</span> Clean, verifiable data at the source eliminates re-typing, back-and-forth emails, and months-long audits. Finance teams get instant books; auditors get evidence trails on demand.
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> Vision:</span> Zero-friction finance done by AI agents. Data flows once, stays accurate forever, and every downstream financial task becomes a click. So your business can move from hindsight to real-time decision making.
-          </p>
+
+          <div className="space-y-5 mb-8">
+            <div>
+              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">The spark</span>
+              </h3>
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                We met on day one of our MSc in Machine Learning at UCL. Between classes, we'd spend hours building AI projects together — from evolutionary algorithms creating AI agents to experimenting with autonomous systems.
+                But the real turning point came when we watched a friend at a Big 4 accounting firm waste an entire afternoon chasing missing receipts and re-typing invoices across legacy systems.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Going deeper</span>
+              </h3>
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                To truly understand the problem, Nitanshu went undercover at Fuse Energy and saw it firsthand: 60% of staff time spent on repetitive data entry.
+                We talked to 30+ accountants and finance teams. The pattern was clear — a global shortage of accountants, yet mountains of manual work that shouldn't exist.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">The solution</span>
+              </h3>
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                Most firms layer automation after messy data has already hit the ledger. We saw a different path: start at the source.
+                Our AI agents plug directly into raw data feeds — bank transactions, invoices, emails, spreadsheets — and maintain continuously-reconciled, audit-ready ledgers.
+                No more re-typing. No more month-long reconciliations. No more isolated bookkeeping, tax, and audit projects.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Our commitment</span>
+              </h3>
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                We're not just building software. We have an in-house accountant who serves our clients and helps ground every agent workflow in real accounting standards.
+                Our goal: enable a single accountant to handle 20× more clients. We're chasing this problem for the next decade — transforming accounting from a bottleneck into a real-time advantage.
+              </p>
+            </div>
+          </div>
           <a
               href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
               target="_blank"
