@@ -1,19 +1,26 @@
 export const WhyItMattersSection = () => {
   return (
-    <section className="bg-white border-t border-b border-gray-200 relative py-12 md:py-16">
+    <section className="relative py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-gray-200"></div>
-        <div className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-gray-200"></div>
+        <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"></div>
+        <div className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-white/10"></div>
       </div>
 
       <div className="mx-4 md:mx-12 relative">
         {/* Header */}
-        <div className="px-4 md:px-12 pb-8 md:pb-10 border-b border-gray-200">
+        <div className="px-4 md:px-12 pb-8 md:pb-10 border-b border-white/10">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 leading-tight mx-auto max-w-4xl">
-              Most platforms <span className="italic">layer on top</span> of messy data. We start at the source.
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+              </span>
+              AI-POWERED SOLUTION
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight mx-auto max-w-4xl">
+              Most platforms <span className="italic bg-gradient-primary bg-clip-text text-transparent">layer on top</span> of messy data. We start at the source.
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed mx-auto">
+            <p className="text-base md:text-lg text-white/70 max-w-3xl leading-relaxed mx-auto">
               The accounting AI market is crowded. Here's why forward-thinking CFOs choose Senitac.
             </p>
           </div>
@@ -24,11 +31,11 @@ export const WhyItMattersSection = () => {
           <div className="max-w-6xl mx-auto space-y-0">
             {/* 1. Data Ingestion */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
-              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-gray-300">
+              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
                     <svg
-                      className="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+                      className="w-5 h-5 md:w-6 md:h-6 text-orange-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -41,30 +48,30 @@ export const WhyItMattersSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl md:text-2xl font-semibold text-white">
                     Forward-deployed at the source
                   </h3>
                 </div>
               </div>
               <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-gray-600 mb-3 font-medium">
+                <p className="text-base text-white/80 mb-3 font-medium">
                   Competitors ask you to upload CSVs. We connect directly to banks, email, and systems.
                 </p>
-                <p className="text-base text-gray-600 leading-relaxed">
+                <p className="text-base text-white/70 leading-relaxed">
                   Most tools sit downstream—waiting for manual exports. Senitac agents live upstream, pulling transactions, invoices, receipts the moment they appear. Real-time data from source to ledger.
                 </p>
               </div>
             </div>
 
-            <div className="border-t border-dashed border-gray-300"></div>
+            <div className="border-t border-dashed border-white/10"></div>
 
             {/* 2. AI + CPAs */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
-              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-gray-300">
+              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
                     <svg
-                      className="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+                      className="w-5 h-5 md:w-6 md:h-6 text-orange-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -77,30 +84,30 @@ export const WhyItMattersSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl md:text-2xl font-semibold text-white">
                     AI + Licensed CPAs in the loop
                   </h3>
                 </div>
               </div>
               <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-gray-600 mb-3 font-medium">
+                <p className="text-base text-white/80 mb-3 font-medium">
                   Pure AI is fast but risky. Pure human is accurate but slow. We combine both.
                 </p>
-                <p className="text-base text-gray-600 leading-relaxed">
+                <p className="text-base text-white/70 leading-relaxed">
                   AI handles categorization, matching, reconciliation. Licensed CPAs review anomalies, month-end close, audit trails. Speed of automation. Confidence of human oversight. Every transaction traced back to source.
                 </p>
               </div>
             </div>
 
-            <div className="border-t border-dashed border-gray-300"></div>
+            <div className="border-t border-dashed border-white/10"></div>
 
-            {/* 3. Full-Stack */}
+            {/* 3. Audit-Ready Evidence Graph */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
-              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-gray-300">
+              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
                     <svg
-                      className="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+                      className="w-5 h-5 md:w-6 md:h-6 text-orange-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -109,21 +116,21 @@ export const WhyItMattersSection = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
-                    Built for enterprises, not freelancers
+                  <h3 className="text-xl md:text-2xl font-semibold text-white">
+                    Audit-ready evidence graph
                   </h3>
                 </div>
               </div>
               <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-gray-600 mb-3 font-medium">
-                  Most accounting AI targets freelancers. We're built for multi-entity, multi-currency operations.
+                <p className="text-base text-white/80 mb-3 font-medium">
+                  We don't just categorize—we build evidence graphs linking every entry to its source.
                 </p>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  Seed-stage to Series C. Multiple entities. Foreign exchange. Revenue recognition. We handle it. One accountant managing 20× more clients is our daily operating model.
+                <p className="text-base text-white/70 leading-relaxed">
+                  Every line item has full evidence trails—receipts, emails, confirmations, agent logs. One click exports everything auditors need. Bank statement → Invoice PDF → GL Entry → CPA Review. Complete chain of custody.
                 </p>
               </div>
             </div>

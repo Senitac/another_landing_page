@@ -130,6 +130,7 @@ export const TransactionMatchingGame = () => {
           setSelectedGL(null);
           setShowSuccess(false);
           setTimeLeft(120);
+          setIsActive(true); // Re-enable game for next level
         }
       }, 2000);
     }

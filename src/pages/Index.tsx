@@ -1,13 +1,10 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
-import { ProblemSection } from "@/components/ProblemSection";
 import { WhyItMattersSection } from "@/components/WhyItMattersSection";
-import { SolutionSection } from "@/components/SolutionSection";
 import { FeaturesShowcaseSection } from "@/components/FeaturesShowcaseSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { TransactionMatchingGame } from "@/components/TransactionMatchingGame";
 import { StatsTickerSection } from "@/components/StatsTickerSection";
-import { TrustSection } from "@/components/TrustSection";
 import { EnterpriseTickerSection } from "@/components/EnterpriseTickerSection";
 import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FAQSection";
@@ -29,14 +26,11 @@ const Index = () => {
       <div className="relative">
         <Navigation />
         <HeroSection />
-        <ProblemSection />
         <WhyItMattersSection />
-        <SolutionSection />
         <FeaturesShowcaseSection />
         <HowItWorksSection />
         <TransactionMatchingGame />
         <StatsTickerSection />
-        <TrustSection />
         <EnterpriseTickerSection />
         <CTASection />
         <FAQSection />
