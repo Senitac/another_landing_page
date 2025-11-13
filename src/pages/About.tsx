@@ -4,7 +4,7 @@ import { Navigation } from "../components/Navigation";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-hero animate-gradient-slow">
       <Navigation />
       <AboutSection />
       <Footer />

@@ -104,7 +104,7 @@ export const HowItWorksSection = () => {
 
               {/* Arrow connector (desktop only, not on last item) */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 -right-4 text-border">
+                <div className="hidden md:block absolute top-16 -right-4 text-orange-500/30">
                   <svg
                     className="w-8 h-8"
                     fill="none"
