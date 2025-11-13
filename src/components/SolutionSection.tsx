@@ -6,21 +6,21 @@ export const SolutionSection = () => {
       icon: Database,
       title: "Forward-Deployed Data Ingestion",
       description:
-        "We don't wait for messy data to hit your ledger. Our platform plugs directly into every raw data feed—bank accounts, email, invoices, contracts, ERPs—and pulls everything automatically.",
+        "We don't wait for messy data. Our platform plugs directly into every source—banks, email, invoices, ERPs—and pulls automatically.",
       features: ["Direct bank connections", "Email & invoice parsing", "ERP system sync", "Spreadsheet imports"],
     },
     {
       icon: RefreshCw,
       title: "Continuous AI Reconciliation",
       description:
-        "Our agents reconcile transactions in real-time as they happen, not at month-end. Your books stay current, and agents learn your chart of accounts and business logic automatically.",
+        "Agents reconcile in real-time, not at month-end. Books stay current. Agents learn your chart of accounts automatically.",
       features: ["99%+ auto-matching", "Real-time processing", "Intelligent categorization", "Anomaly detection"],
     },
     {
       icon: Shield,
       title: "Audit-Ready Evidence Graph",
       description:
-        "Every line item in your accounts has full evidence trails—receipts, emails, confirmations, and logs of all agent actions. One click to export everything auditors need.",
+        "Every line item has full evidence trails—receipts, emails, confirmations, agent logs. One click exports everything auditors need.",
       features: ["Complete audit trails", "Auto evidence capture", "Tax classifications", "Compliance checks"],
     },
   ];
@@ -41,7 +41,7 @@ export const SolutionSection = () => {
             Where competitors optimize workflows, <span className="bg-gradient-primary bg-clip-text text-transparent">we eliminate the manual chain</span>
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Most automation layers on top of messy, manually-entered data. We start at the source—ensuring your foundation is always trustworthy.
+            Most automation layers on messy, manual data. We start at the source.
           </p>
         </div>
 

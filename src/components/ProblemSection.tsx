@@ -6,19 +6,19 @@ export const ProblemSection = () => {
       icon: Mail,
       title: "Chasing receipts and re-typing invoices",
       description:
-        "Accountants waste entire afternoons hunting down missing receipts and manually re-entering invoice data across different legacy systems. What should be automatic becomes hours of tedious copy-paste work.",
+        "Entire afternoons hunting missing receipts. Manual re-entry across legacy systems. What should be automatic becomes hours of copy-paste.",
     },
     {
       icon: Clock,
       title: "60% of time spent on repetitive data entry",
       description:
-        "Finance teams drown in manual tasks: sorting emails, keying transactions into ERPs, matching bank statements, chasing approvals. Month-end close stretches into days instead of hours because nothing flows automatically.",
+        "Sorting emails. Keying transactions. Matching statements. Chasing approvals. Month-end close stretches into days because nothing flows automatically.",
     },
     {
       icon: AlertCircle,
       title: "No way to monitor all your data streams",
       description:
-        "Without automation that starts at the source, businesses have no real-time view across bank feeds, invoices, emails, contracts, and spreadsheets. By the time you spot issues, it's too late.",
+        "No real-time view across bank feeds, invoices, emails, contracts. By the time you spot issues, it's too late.",
     },
   ];
 
@@ -32,7 +32,7 @@ export const ProblemSection = () => {
               There's a <span className="bg-gradient-primary bg-clip-text text-transparent">global shortage</span> of accountants
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              And it's getting worse. The industry norm is wasting time on work that should never be manual in the first place.
+              And it's getting worse. The industry wastes time on work that should never be manual.
             </p>
           </div>
         </div>

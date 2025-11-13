@@ -51,7 +51,7 @@ export const WhyItMattersSection = () => {
                   Competitors ask you to upload CSVs. We connect directly to banks, email, and systems.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Most tools sit downstream—waiting for you to manually export and import files. Senitac agents live upstream, pulling transactions, invoices, and receipts the moment they appear. No spreadsheets. No manual uploads. Just real-time data flowing from source to ledger.
+                  Most tools sit downstream—waiting for manual exports. Senitac agents live upstream, pulling transactions, invoices, receipts the moment they appear. Real-time data from source to ledger.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export const WhyItMattersSection = () => {
                   Pure AI is fast but risky. Pure human is accurate but slow. We combine both.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Our AI handles the repetitive work—categorization, matching, reconciliation. But licensed CPAs review anomalies, month-end close, and audit trails. You get the speed of automation with the confidence of human oversight. Every transaction has an evidence chain back to the source.
+                  AI handles categorization, matching, reconciliation. Licensed CPAs review anomalies, month-end close, audit trails. Speed of automation. Confidence of human oversight. Every transaction traced back to source.
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@ export const WhyItMattersSection = () => {
                   Most accounting AI targets freelancers. We're built for multi-entity, multi-currency operations.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Senitac scales from seed-stage startups to Series C companies with complex accounting needs. Multiple entities? Foreign exchange? Revenue recognition? We handle it. One accountant managing 20× more clients isn't a dream—it's our daily operating model.
+                  Seed-stage to Series C. Multiple entities. Foreign exchange. Revenue recognition. We handle it. One accountant managing 20× more clients is our daily operating model.
                 </p>
               </div>
             </div>

@@ -16,7 +16,8 @@ export const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-xl text-white/70 leading-relaxed max-w-xl">
-              AI agents that start at the source—ingesting raw data from your bank, email, and systems—then continuously reconcile everything. One accountant. 20× more clients.
+              AI agents ingest data from source, reconcile continuously.<br />
+              One accountant. 20× more clients.
             </p>
 
             {/* CTA Button */}

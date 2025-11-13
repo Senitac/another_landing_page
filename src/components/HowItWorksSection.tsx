@@ -7,7 +7,7 @@ export const HowItWorksSection = () => {
       icon: Link2,
       title: "Connect Your Systems",
       description:
-        "Link bank accounts, email, and accounting software with secure OAuth connections. One-time setup, no credentials stored.",
+        "Secure OAuth connections to banks, email, accounting software. One-time setup. No credentials stored.",
       details: [
         "Major banks supported",
         "QuickBooks, Xero, NetSuite",
@@ -20,7 +20,7 @@ export const HowItWorksSection = () => {
       icon: Brain,
       title: "AI Agents Process Everything",
       description:
-        "Our agents continuously pull, categorize, and reconcile transactions. They learn your chart of accounts and business logic automatically.",
+        "Agents pull, categorize, reconcile continuously. Learn your chart of accounts automatically.",
       details: [
         "Real-time data sync",
         "Auto-categorization",
@@ -33,7 +33,7 @@ export const HowItWorksSection = () => {
       icon: CheckCircle,
       title: "Review & Approve",
       description:
-        "Access your real-time dashboard to review anomalies and approve suggestions. Close books with one click.",
+        "Real-time dashboard for anomalies and approvals. Close books with one click.",
       details: [
         "Live dashboard",
         "Flagged items for review",
