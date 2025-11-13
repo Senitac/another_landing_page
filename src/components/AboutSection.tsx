@@ -38,49 +38,44 @@ export const AboutSection = () => {
               <div className="w-full max-w-2xl rounded-xl bg-neutral-800/50 animate-pulse" style={{ aspectRatio: '16/7' }} />
             )}
           </div>
-          <p className="text-white/90 text-[clamp(1rem,1.2vw,1.15rem)] leading-relaxed drop-shadow-lg mb-4" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            We're Nitanshu and Sebastian, the founders of <span className="bg-gradient-primary bg-clip-text text-transparent font-semibold">Senitac</span>.
-          </p>
+          <div className="space-y-6 mb-8">
+            <p className="text-white/90 text-[clamp(1rem,1.2vw,1.15rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+              We're <span className="font-semibold">Nitanshu and Sebastian</span>, and we're building <span className="bg-gradient-primary bg-clip-text text-transparent font-semibold">Senitac</span> — the full-stack AI accountancy.
+            </p>
 
-          <div className="space-y-5 mb-8">
-            <div>
-              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">The spark</span>
-              </h3>
+            <div className="border-l-2 border-orange-500/30 pl-6 py-2">
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed mb-4" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                We met on day one of our MSc in Machine Learning at UCL, bonding over AI agents and evolutionary algorithms. But the real spark came when we watched a friend at a Big 4 firm waste an entire afternoon chasing receipts and re-typing invoices.
+              </p>
               <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                We met on day one of our MSc in Machine Learning at UCL. Between classes, we'd spend hours building AI projects together — from evolutionary algorithms creating AI agents to experimenting with autonomous systems.
-                But the real turning point came when we watched a friend at a Big 4 accounting firm waste an entire afternoon chasing missing receipts and re-typing invoices across legacy systems.
+                To understand the problem deeply, Nitanshu went undercover at Fuse Energy. The reality: <span className="text-orange-400 font-semibold">60% of staff time on repetitive data entry</span>. We spoke to 30+ practitioners. The pattern was undeniable — a global shortage of accountants, yet endless manual work.
               </p>
             </div>
 
             <div>
-              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">Going deeper</span>
+              <h3 className="text-white font-semibold text-xl mb-3" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Why we're different</span>
               </h3>
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed mb-3" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                Most firms bolt AI onto broken workflows — layering automation <em>after</em> messy data hits the ledger. That's backwards.
+              </p>
+              <p className="text-white/90 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed font-medium mb-3" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                We start at the source. Our AI agents connect to raw data feeds — bank accounts, invoices, emails, spreadsheets, ERPs — and build an evidence graph from day one. Every transaction matched. Every receipt filed. Continuously reconciled. Audit-ready by default.
+              </p>
               <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                To truly understand the problem, Nitanshu went undercover at Fuse Energy and saw it firsthand: 60% of staff time spent on repetitive data entry.
-                We talked to 30+ accountants and finance teams. The pattern was clear — a global shortage of accountants, yet mountains of manual work that shouldn't exist.
+                No more re-typing. No month-long close. No isolated bookkeeping, tax, and audit projects. Just one continuously-updated system.
               </p>
             </div>
 
             <div>
-              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">The solution</span>
+              <h3 className="text-white font-semibold text-xl mb-3" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Our mission</span>
               </h3>
               <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                Most firms layer automation after messy data has already hit the ledger. We saw a different path: start at the source.
-                Our AI agents plug directly into raw data feeds — bank transactions, invoices, emails, spreadsheets — and maintain continuously-reconciled, audit-ready ledgers.
-                No more re-typing. No more month-long reconciliations. No more isolated bookkeeping, tax, and audit projects.
+                We're not replacing accountants — we're amplifying them. We have an in-house accountant from day one, serving clients and grounding every agent workflow in real accounting standards. Our goal: <span className="text-orange-400 font-semibold">enable one accountant to handle 20× more clients</span>.
               </p>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold text-xl mb-2" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">Our commitment</span>
-              </h3>
-              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                We're not just building software. We have an in-house accountant who serves our clients and helps ground every agent workflow in real accounting standards.
-                Our goal: enable a single accountant to handle 20× more clients. We're chasing this problem for the next decade — transforming accounting from a bottleneck into a real-time advantage.
+              <p className="text-white/80 text-[clamp(0.95rem,1.15vw,1.05rem)] leading-relaxed mt-3" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
+                We're chasing this for the next decade. Transforming accounting from a bottleneck into a real-time advantage.
               </p>
             </div>
           </div>

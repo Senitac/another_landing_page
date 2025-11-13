@@ -19,32 +19,44 @@ export const ProblemSection = () => {
       <div className="container max-w-6xl mx-auto w-full px-6 md:px-12 relative z-10">
         {/* Problem Statement */}
         <div className="mb-16">
-          <h2 className="text-white font-satoshi font-semibold text-[clamp(1.75rem,4vw,2.75rem)] leading-tight tracking-tight drop-shadow-xl mb-8">
-            Finance teams waste <span className="bg-gradient-primary bg-clip-text text-transparent">hundreds of hours</span> every month
+          <h2 className="text-white font-satoshi font-semibold text-[clamp(1.75rem,4vw,2.75rem)] leading-tight tracking-tight drop-shadow-xl mb-4">
+            Your finance team is drowning in <span className="bg-gradient-primary bg-clip-text text-transparent">manual work</span>
           </h2>
+          <p className="text-white/70 text-[clamp(1rem,1.2vw,1.15rem)] leading-relaxed mb-12 max-w-3xl">
+            Re-typing invoices. Chasing receipts. Reconciling transactions across legacy systems. This is the reality for finance teams today.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Pain Point 1 */}
             <div className="flex flex-col gap-3">
-              <div className="text-orange-500 text-4xl font-bold">60%</div>
-              <p className="text-white/80 text-base leading-relaxed">
-                of finance staff time spent on repetitive data entry and chasing missing receipts
+              <div className="text-orange-500 text-5xl font-bold">60%</div>
+              <p className="text-white/90 text-base leading-relaxed font-medium">
+                of staff time wasted on data entry
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Instead of strategic work, teams manually move data between systems
               </p>
             </div>
 
             {/* Pain Point 2 */}
             <div className="flex flex-col gap-3">
-              <div className="text-orange-500 text-4xl font-bold">Months</div>
-              <p className="text-white/80 text-base leading-relaxed">
-                wasted on back-and-forth emails and reconciliation before audits can even begin
+              <div className="text-orange-500 text-5xl font-bold">Months</div>
+              <p className="text-white/90 text-base leading-relaxed font-medium">
+                to close books and prepare for audit
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Back-and-forth emails hunting for evidence that should already exist
               </p>
             </div>
 
             {/* Pain Point 3 */}
             <div className="flex flex-col gap-3">
-              <div className="text-orange-500 text-4xl font-bold">340K</div>
-              <p className="text-white/80 text-base leading-relaxed">
-                global accountant shortage by 2025, yet manual work keeps growing
+              <div className="text-orange-500 text-5xl font-bold">340K</div>
+              <p className="text-white/90 text-base leading-relaxed font-medium">
+                accountant shortage by 2025
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Yet the manual work keeps piling up with no end in sight
               </p>
             </div>
           </div>
@@ -53,12 +65,12 @@ export const ProblemSection = () => {
         {/* Platform Showcase */}
         <div className="mb-12">
           <h3 className="text-white font-satoshi font-semibold text-[clamp(1.5rem,3.5vw,2.25rem)] leading-tight tracking-tight drop-shadow-xl mb-6">
-            Meet your <span className="bg-gradient-primary bg-clip-text text-transparent">AI accounting team</span>
+            What if your books <span className="bg-gradient-primary bg-clip-text text-transparent">closed themselves?</span>
           </h3>
 
           <p className="text-white/80 text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed mb-8 max-w-3xl">
-            Our AI agents start at the source — pulling raw data directly from your bank, email, invoices, and spreadsheets.
-            They continuously reconcile everything into an audit-ready ledger, so bookkeeping, payment chasing, and tax classifications happen automatically.
+            Our AI agents connect directly to your data sources — bank accounts, email, invoices, spreadsheets, ERPs — and maintain a continuously-reconciled ledger.
+            Every transaction is matched, every receipt is filed, every payment is chased. Automatically.
           </p>
 
           {/* Video Embed - Clean, no overlays */}
@@ -86,7 +98,7 @@ export const ProblemSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Traditional Approach */}
-            <div className="bg-neutral-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="bg-neutral-900/20 backdrop-blur-sm rounded-xl p-6">
               <h4 className="text-white/90 font-semibold text-lg mb-3">Traditional Firms</h4>
               <ul className="space-y-2 text-white/70 text-sm">
                 <li>→ Layer automation <em>after</em> messy data hits the ledger</li>
@@ -97,7 +109,7 @@ export const ProblemSection = () => {
             </div>
 
             {/* Senitac Approach */}
-            <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/10 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30">
+            <div className="bg-gradient-to-br from-orange-500/15 to-orange-600/5 backdrop-blur-sm rounded-xl p-6">
               <h4 className="text-white font-semibold text-lg mb-3">Senitac</h4>
               <ul className="space-y-2 text-white/90 text-sm">
                 <li>✓ Start at the source — agents ingest raw data directly</li>
@@ -110,7 +122,7 @@ export const ProblemSection = () => {
         </div>
 
         {/* Enterprise Grade */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center pb-12">
           <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-4">
             Enterprise-grade security
           </p>
@@ -119,6 +131,9 @@ export const ProblemSection = () => {
           </p>
         </div>
       </div>
+
+      {/* Seamless gradient transition at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(24,30%,8%)] pointer-events-none"></div>
     </section>
   );
 };
