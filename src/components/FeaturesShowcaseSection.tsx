@@ -1,46 +1,47 @@
+import { DataIngestionMockup } from "./mockups/DataIngestionMockup";
+import { ReconciliationMockup } from "./mockups/ReconciliationMockup";
+import { AuditTrailMockup } from "./mockups/AuditTrailMockup";
+
 export const FeaturesShowcaseSection = () => {
   const features = [
     {
       badge: "FORWARD-DEPLOYED INGESTION",
       title: "Start at the source, not the spreadsheet",
       description:
-        "While competitors ask you to upload files, our AI agents connect directly to your bank, email, and systems. We pull raw transactions, invoices, and receipts automatically—so you never touch a CSV again.",
+        "Competitors ask you to upload files. Our AI agents connect directly to banks, email, systems. Pull raw transactions automatically. Never touch a CSV again.",
       benefits: [
         "Direct bank connections via secure OAuth",
         "Email parsing for invoices and receipts",
         "ERP integrations (QuickBooks, Xero, NetSuite)",
         "Automatic data sync every 15 minutes",
       ],
-      imageUrl: "/placeholder-screenshot-1.png", // User will replace with real screenshots
-      bgColor: "white",
+      mockup: DataIngestionMockup,
     },
     {
       badge: "CONTINUOUS AI RECONCILIATION",
       title: "Real-time reconciliation, not month-end panic",
       description:
-        "Our AI doesn't wait until month-end. It continuously matches transactions, categorizes expenses, and flags discrepancies in real-time. What used to take 3 days now takes 3 hours.",
+        "AI doesn't wait until month-end. Continuously matches transactions, categorizes expenses, flags discrepancies in real-time. 3 days becomes 3 hours.",
       benefits: [
         "99.8% automatic matching accuracy",
         "Smart categorization learns your business",
         "Instant anomaly detection",
         "Zero manual data entry",
       ],
-      imageUrl: "/placeholder-screenshot-2.png",
-      bgColor: "gray",
+      mockup: ReconciliationMockup,
     },
     {
       badge: "AUDIT-READY EVIDENCE GRAPH",
       title: "Every transaction has a provable chain",
       description:
-        "We don't just categorize—we build an evidence graph. Each entry links back to the original source: the bank statement, the invoice PDF, the approval email. Your books are audit-ready by default.",
+        "We don't just categorize—we build evidence graphs. Each entry links to the original source: bank statement, invoice PDF, approval email. Audit-ready by default.",
       benefits: [
         "Complete audit trail for every transaction",
         "One-click evidence retrieval",
         "Automatic documentation linking",
         "SOC 2 Type II certified infrastructure",
       ],
-      imageUrl: "/placeholder-screenshot-3.png",
-      bgColor: "white",
+      mockup: AuditTrailMockup,
     },
   ];
 
@@ -113,38 +114,9 @@ export const FeaturesShowcaseSection = () => {
                       </div>
                     </div>
 
-                    {/* Screenshot Placeholder */}
-                    <div className="aspect-[16/10] bg-gradient-to-br from-gray-800 to-gray-900 relative">
-                      {/* Placeholder content - will be replaced with real screenshots */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center space-y-4">
-                          <div className="w-16 h-16 mx-auto bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/20">
-                            <svg
-                              className="w-8 h-8 text-orange-500"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              />
-                            </svg>
-                          </div>
-                          <p className="text-sm text-white/40">
-                            Screenshot placeholder
-                          </p>
-                          <p className="text-xs text-white/30 max-w-xs">
-                            Replace with actual Senitac platform screenshot showing{" "}
-                            {feature.badge.toLowerCase()}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Subtle gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+                    {/* Mockup Screenshot */}
+                    <div className="aspect-[16/10] bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+                      <feature.mockup />
                     </div>
                   </div>
 
