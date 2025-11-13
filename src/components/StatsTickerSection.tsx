@@ -14,19 +14,19 @@ export const StatsTickerSection = () => {
   const duplicatedStats = [...stats, ...stats];
 
   return (
-    <section className="py-12 bg-background border-y border-border relative overflow-hidden">
+    <section className="py-12 bg-gradient-hero animate-gradient-slow border-y border-white/10 relative overflow-hidden">
       {/* Animated ticker */}
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background pointer-events-none z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none z-10"></div>
 
         <div className="flex animate-slide-left">
           <div className="flex items-center gap-12 px-6 whitespace-nowrap">
             {duplicatedStats.map((stat, index) => (
               <div key={index} className="flex items-center gap-3">
-                <span className="font-mono text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
+                <span className="font-mono text-xs sm:text-sm text-white/60 uppercase tracking-wider">
                   {stat.label}
                 </span>
-                <span className="font-mono text-sm sm:text-base text-foreground font-medium">
+                <span className="font-mono text-sm sm:text-base text-white font-medium">
                   {stat.value}
                 </span>
                 <span className="font-mono text-xs sm:text-sm text-green-400">
@@ -38,10 +38,10 @@ export const StatsTickerSection = () => {
           <div className="flex items-center gap-12 px-6 whitespace-nowrap">
             {duplicatedStats.map((stat, index) => (
               <div key={`duplicate-${index}`} className="flex items-center gap-3">
-                <span className="font-mono text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
+                <span className="font-mono text-xs sm:text-sm text-white/60 uppercase tracking-wider">
                   {stat.label}
                 </span>
-                <span className="font-mono text-sm sm:text-base text-foreground font-medium">
+                <span className="font-mono text-sm sm:text-base text-white font-medium">
                   {stat.value}
                 </span>
                 <span className="font-mono text-xs sm:text-sm text-green-400">

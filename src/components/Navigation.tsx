@@ -6,7 +6,7 @@ export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
       <div className="container max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -20,19 +20,19 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-2">
             <a
               href="#features"
-              className="text-sm font-medium text-foreground rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
+              className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="text-sm font-medium text-foreground rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
+              className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
             >
               How It Works
             </a>
             <a
               href="/about"
-              className="text-sm font-medium text-foreground rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
+              className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
             >
               About
             </a>

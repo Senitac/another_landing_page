@@ -25,17 +25,16 @@ export const TrustSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-card/30 relative">
+    <section className="py-20 bg-gradient-hero animate-gradient-slow relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
-            Enterprise-grade security.{" "}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Startup-friendly pricing.
-            </span>
+              Enterprise-grade
+            </span> security
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Built for scale, designed for trust
           </p>
         </div>
@@ -45,15 +44,15 @@ export const TrustSection = () => {
           {trustItems.map((item, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-card border border-border hover:border-orange-500/50 transition-all duration-300 group"
+              className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group"
             >
               <div className="mb-4 w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
                 <item.icon className="w-5 h-5 text-orange-500" />
               </div>
-              <h3 className="text-base font-semibold text-foreground mb-2">
+              <h3 className="text-base font-semibold text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-white/70 leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -62,15 +61,9 @@ export const TrustSection = () => {
 
         {/* Additional trust indicators */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-6">
+          <p className="text-sm text-white/60 mb-6">
             Trusted by forward-thinking companies
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-50">
-            {/* Placeholder for company logos */}
-            <div className="text-xs text-muted-foreground uppercase tracking-wider">
-              [CLIENT LOGOS]
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -44,30 +44,30 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-card/30 relative">
+    <section id="how-it-works" className="py-20 bg-gradient-hero animate-gradient-slow relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
             HOW IT WORKS
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
-            From raw data to <span className="bg-gradient-primary bg-clip-text text-transparent">clean books</span> in 3 steps
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
+            Raw data to <span className="bg-gradient-primary bg-clip-text text-transparent">clean books</span> in 3 steps
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Get started in minutes, not months. Our AI handles the complexity.
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            Get started in minutes. Our AI handles the complexity.
           </p>
         </div>
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Connecting line (desktop only) */}
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+          <div className="hidden md:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Step card */}
-              <div className="relative p-6 rounded-xl bg-card border border-border hover:border-orange-500/50 transition-all duration-300 group">
+              <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group">
                 {/* Step number */}
                 <div className="absolute -top-4 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-bold">
                   {step.number}
@@ -79,19 +79,19 @@ export const HowItWorksSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm text-white/70 mb-4 leading-relaxed">
                   {step.description}
                 </p>
 
                 {/* Details */}
                 <ul className="space-y-2">
                   {step.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <li key={idx} className="flex items-center gap-2 text-sm text-white/60">
                       <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
                       <span>{detail}</span>
                     </li>

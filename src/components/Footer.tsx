@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border py-16">
+    <footer className="bg-gradient-hero animate-gradient-slow border-t border-white/10 py-16">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Column 1: Logo + Description */}
@@ -10,14 +10,14 @@ export const Footer = () => {
                 Senitac
               </div>
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-white/60 mb-4">
               Full-stack AI accountancy for modern businesses
             </p>
             {/* Social links placeholder */}
             <div className="flex gap-4">
               <a
                 href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-white/60 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +26,7 @@ export const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-white/60 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,25 +38,25 @@ export const Footer = () => {
 
           {/* Column 2: Product */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Product</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-semibold text-white mb-4">Product</h4>
+            <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="#features" className="hover:text-foreground transition-colors">
+                <a href="#features" className="hover:text-white transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-foreground transition-colors">
+                <a href="#how-it-works" className="hover:text-white transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Integrations
                 </a>
               </li>
@@ -65,20 +65,20 @@ export const Footer = () => {
 
           {/* Column 3: Company */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="/about" className="hover:text-foreground transition-colors">
+                <a href="/about" className="hover:text-white transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/vision" className="hover:text-foreground transition-colors">
+                <a href="/vision" className="hover:text-white transition-colors">
                   Vision
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Blog
                 </a>
               </li>
@@ -87,7 +87,7 @@ export const Footer = () => {
                   href="https://calendly.com/nitanshu15/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
+                  className="hover:text-white transition-colors"
                 >
                   Contact
                 </a>
@@ -97,25 +97,25 @@ export const Footer = () => {
 
           {/* Column 4: Legal & Resources */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-2 text-sm text-white/60">
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Security
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-foreground transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   Documentation
                 </a>
               </li>
@@ -124,21 +124,21 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
             <p>© 2025 Senitac. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-foreground transition-colors">
+              <a href="#" className="hover:text-white transition-colors">
                 Privacy
               </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              <a href="#" className="hover:text-white transition-colors">
                 Terms
               </a>
               <a
                 href="https://calendly.com/nitanshu15/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-white transition-colors"
               >
                 Contact
               </a>

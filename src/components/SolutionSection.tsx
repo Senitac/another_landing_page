@@ -26,7 +26,7 @@ export const SolutionSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-background relative">
+    <section id="features" className="py-20 bg-gradient-hero animate-gradient-slow relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -37,11 +37,11 @@ export const SolutionSection = () => {
             </span>
             AI-POWERED SOLUTION
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
             Meet your <span className="bg-gradient-primary bg-clip-text text-transparent">AI accounting team</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Senitac's AI agents work 24/7 to keep your books clean, current, and audit-ready.
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            AI agents that work 24/7 to keep your books clean and audit-ready.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export const SolutionSection = () => {
           {capabilities.map((capability, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-xl bg-card border border-border hover:border-orange-500/50 transition-all duration-300 hover:shadow-glow"
+              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:shadow-glow"
             >
               {/* Icon */}
               <div className="mb-4 w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
@@ -58,19 +58,19 @@ export const SolutionSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {capability.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-sm text-white/70 mb-4 leading-relaxed">
                 {capability.description}
               </p>
 
               {/* Features */}
               <ul className="space-y-2">
                 {capability.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <li key={idx} className="flex items-center gap-2 text-sm text-white/60">
                     <div className="w-1 h-1 rounded-full bg-orange-500"></div>
                     <span>{feature}</span>
                   </li>

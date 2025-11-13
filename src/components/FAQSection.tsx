@@ -51,16 +51,16 @@ const faqData: FAQItem[] = [
 
 const FAQAccordionItem = ({ item, isOpen, onClick }: { item: FAQItem; isOpen: boolean; onClick: () => void }) => {
   return (
-    <div className="border-b border-border">
+    <div className="border-b border-white/10">
       <button
         onClick={onClick}
         className="w-full py-5 px-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors group"
       >
-        <span className="text-base md:text-lg font-medium text-foreground pr-8">
+        <span className="text-base md:text-lg font-medium text-white pr-8">
           {item.question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${
+          className={`w-5 h-5 text-white/60 transition-transform duration-300 flex-shrink-0 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -71,7 +71,7 @@ const FAQAccordionItem = ({ item, isOpen, onClick }: { item: FAQItem; isOpen: bo
         }`}
       >
         <div className="px-6 pb-5">
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+          <p className="text-sm md:text-base text-white/70 leading-relaxed">
             {item.answer}
           </p>
         </div>
@@ -84,23 +84,23 @@ export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 bg-background relative">
+    <section className="py-20 bg-gradient-hero animate-gradient-slow relative">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
             FAQ
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
-            Frequently Asked <span className="bg-gradient-primary bg-clip-text text-transparent">Questions</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Questions?</span> Answered
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Everything you need to know about Senitac
+          <p className="text-lg text-white/70">
+            Everything you need to know
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="bg-card rounded-xl border border-border overflow-hidden">
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
           {faqData.map((item, index) => (
             <FAQAccordionItem
               key={index}
@@ -113,14 +113,14 @@ export const FAQSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground mb-4">
+          <p className="text-sm text-white/60 mb-4">
             Still have questions? We're here to help.
           </p>
           <a
             href="https://calendly.com/nitanshu15/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border hover:border-orange-500/50 text-foreground font-medium rounded-lg transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 hover:border-orange-500/50 text-white font-medium rounded-lg transition-all duration-300"
           >
             Book a Demo
           </a>
