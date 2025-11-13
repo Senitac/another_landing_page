@@ -4,10 +4,16 @@ import { Navigation } from "../components/Navigation";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero animate-gradient-slow">
-      <Navigation />
-      <AboutSection />
-      <Footer />
+    <div className="relative w-full min-h-screen">
+      {/* Optimized gradient background - matches homepage */}
+      <div className="fixed inset-0 w-full h-full bg-gradient-hero gradient-optimized -z-10" />
+
+      {/* Content */}
+      <div className="relative">
+        <Navigation />
+        <AboutSection />
+        <Footer />
+      </div>
     </div>
   );
 };
