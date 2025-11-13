@@ -19,7 +19,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">
             <a
-              href="#features"
+              href="/#features"
               className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
             >
               Features
@@ -60,7 +60,7 @@ export const Navigation = () => {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-2">
             <a
-              href="#features"
+              href="/#features"
               className="block px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-white/5 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >

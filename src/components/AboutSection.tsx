@@ -4,14 +4,16 @@ export const AboutSection = () => {
   return (
     <section className="relative w-full py-20 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Founders Photo */}
+        {/* Founders Photo - Cinematic Crop */}
         <div className="mb-16">
-          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10">
-            <img
-              src="/founder_pic.JPG"
-              alt="Senitac Founders"
-              className="w-full h-auto object-cover"
-            />
+          <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+            <div className="relative w-full" style={{ paddingBottom: '35%' }}>
+              <img
+                src="/founder_pic.JPG"
+                alt="Senitac Founders"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
         </div>
 
