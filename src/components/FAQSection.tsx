@@ -60,20 +60,22 @@ const FAQAccordionItem = ({ item, isOpen, onClick }: { item: FAQItem; isOpen: bo
           {item.question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-white/60 transition-transform duration-300 flex-shrink-0 ${
+          className={`w-5 h-5 text-white/60 transition-transform duration-200 flex-shrink-0 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-96" : "max-h-0"
+        className={`grid transition-all duration-200 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="px-6 pb-5">
-          <p className="text-sm md:text-base text-white/70 leading-relaxed">
-            {item.answer}
-          </p>
+        <div className="overflow-hidden">
+          <div className="px-6 pb-5">
+            <p className="text-sm md:text-base text-white/70 leading-relaxed">
+              {item.answer}
+            </p>
+          </div>
         </div>
       </div>
     </div>

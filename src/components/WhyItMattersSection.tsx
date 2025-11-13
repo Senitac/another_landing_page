@@ -1,6 +1,6 @@
 export const WhyItMattersSection = () => {
   return (
-    <section className="relative py-12 md:py-16">
+    <section id="why-it-matters" className="relative py-12 md:py-16">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"></div>
         <div className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-white/10"></div>
@@ -18,7 +18,7 @@ export const WhyItMattersSection = () => {
               AI-POWERED SOLUTION
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight mx-auto max-w-4xl">
-              Most platforms <span className="italic bg-gradient-primary bg-clip-text text-transparent">layer on top</span> of messy data. We start at the source.
+              Most platforms layer on top of messy data. <span className="italic bg-gradient-primary bg-clip-text text-transparent">We start at the source.</span>
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-3xl leading-relaxed mx-auto">
               The accounting AI market is crowded. Here's why forward-thinking CFOs choose Senitac.
