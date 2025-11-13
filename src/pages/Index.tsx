@@ -4,7 +4,6 @@ import { WhyItMattersSection } from "@/components/WhyItMattersSection";
 import { FeaturesShowcaseSection } from "@/components/FeaturesShowcaseSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { TransactionMatchingGame } from "@/components/TransactionMatchingGame";
-import { StatsTickerSection } from "@/components/StatsTickerSection";
 import { EnterpriseTickerSection } from "@/components/EnterpriseTickerSection";
 import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FAQSection";
@@ -30,7 +29,6 @@ const Index = () => {
         <FeaturesShowcaseSection />
         <HowItWorksSection />
         <TransactionMatchingGame />
-        <StatsTickerSection />
         <EnterpriseTickerSection />
         <CTASection />
         <FAQSection />
