@@ -1,66 +1,70 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Calendar, MessageCircle, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Email submitted:", email);
+    // TODO: Add email capture logic
   };
 
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background effects */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-display font-bold text-foreground mb-6">
-            Ready to Transform{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Your Practice?
-            </span>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-purple-900/10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-3xl"></div>
+
+      <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+            Ready to <span className="bg-gradient-primary bg-clip-text text-transparent">automate</span> your accounting?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join the waiting list and be among the first to experience the future 
-            of AI-powered accounting. Let's build something extraordinary together.
+            Join forward-thinking companies saving 40% on accounting costs and closing books 3x faster
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="xl" className="group">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule a Call
-            </Button>
-            <Button variant="outline" size="xl" className="group">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Get in Touch
-            </Button>
-          </div>
-          
-          <div className="max-w-md mx-auto">
-            <form onSubmit={handleSubmit} className="flex gap-3">
-              <div className="flex-1">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-card/50 backdrop-blur-sm border-border"
-                  required
-                />
-              </div>
-              <Button type="submit" variant="cta">
-                <Mail className="h-4 w-4" />
+
+          {/* Email capture form */}
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input
+                type="email"
+                placeholder="Enter your work email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 h-12 px-4 bg-card border-border text-foreground placeholder:text-muted-foreground"
+              />
+              <Button
+                type="submit"
+                className="h-12 px-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </form>
-            <p className="text-sm text-muted-foreground mt-3">
-              No spam, just updates on our progress and early access opportunities.
+            </div>
+          </form>
+
+          <p className="text-sm text-muted-foreground">
+            No credit card required • Free demo • Setup in minutes
+          </p>
+
+          {/* Alternate CTA */}
+          <div className="mt-8 pt-8 border-t border-border">
+            <p className="text-sm text-muted-foreground mb-4">
+              Or book a personalized demo
             </p>
+            <a
+              href="https://calendly.com/nitanshu15/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border hover:border-orange-500/50 text-foreground font-medium rounded-lg transition-all duration-300"
+            >
+              Schedule a Call
+            </a>
           </div>
         </div>
       </div>

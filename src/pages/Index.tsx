@@ -1,5 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { ProblemSection } from "@/components/ProblemSection";
+import { SolutionSection } from "@/components/SolutionSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { StatsTickerSection } from "@/components/StatsTickerSection";
+import { TrustSection } from "@/components/TrustSection";
+import { CTASection } from "@/components/CTASection";
+import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -7,6 +14,13 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <HowItWorksSection />
+      <StatsTickerSection />
+      <TrustSection />
+      <CTASection />
+      <FAQSection />
       <Footer />
     </div>
   );

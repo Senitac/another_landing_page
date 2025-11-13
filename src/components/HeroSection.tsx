@@ -1,104 +1,159 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calendar, Mail, X } from "lucide-react";
+import { Calendar, ArrowRight, Play } from "lucide-react";
 import { useState } from "react";
 
 export const HeroSection = () => {
   const [email, setEmail] = useState("");
-  const [showDemo, setShowDemo] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Email submitted:", email);
+    // TODO: Add email capture logic here
   };
 
   return (
-    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
-      {/* Enhanced background glow effects */}
-      {/* Background glow effects for consistency */}
-      {/* Removed or reduced top-left glow */}
-      {/* <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[180px] pointer-events-none"></div> */}
-      {/* Main glow moved to bottom right, larger and darker */}
+    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex items-center">
+      {/* Background glow effects */}
       <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-orange-700/30 rounded-full blur-[200px] pointer-events-none"></div>
       <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-      {/* New dark swirls for depth */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-black/40 rounded-full blur-[180px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-neutral-900/30 rounded-full blur-[160px] pointer-events-none"></div>
       <div className="absolute top-1/2 right-1/3 w-[350px] h-[350px] bg-orange-900/30 rounded-full blur-[140px] pointer-events-none"></div>
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMCAwJSAxMCUgLyAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4K')] opacity-20 pointer-events-none"></div>
-      {/* Main content grid container with top padding for nav */}
-      <div className="container max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 pt-24 md:pt-28 px-6 md:px-12">
-        {/* Demo card and headline stacked with tight gap */}
-        <div className="col-span-1 md:col-span-8 flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={() => setShowDemo((v) => !v)}
-            className="rounded-2xl bg-white/20 backdrop-blur-md shadow-elegant px-5 py-2 flex items-center gap-3 border border-white/30 w-fit hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400"
-            aria-expanded={showDemo}
-            aria-controls="demo-video-section"
-          >
-            <span className="font-medium text-sm text-white/80">Watch Demo</span>
-            <span className="w-7 h-4 bg-gray-200/60 rounded-lg flex items-center justify-center text-xs text-gray-700">🎬</span>
-          </button>
-          {/* Demo video expandable section */}
-          <div
-            id="demo-video-section"
-            className={`overflow-hidden transition-all duration-500 ${showDemo ? 'max-h-[80vh] mt-6' : 'max-h-0'} w-full`}
-            style={{
-              opacity: showDemo ? 1 : 0,
-              pointerEvents: showDemo ? 'auto' : 'none',
-            }}
-          >
-            <div className="relative">
-              <button
-                onClick={() => setShowDemo(false)}
-                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-black/70 text-white hover:bg-black/90 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"
-                aria-label="Close demo"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <div className="w-full aspect-video max-w-7xl">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/80s7QQzwSyo?rel=0&modestbranding=1&vq=hd1080"
-                  title="Demo Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                  loading="lazy"
-                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                ></iframe>
+
+      {/* Main content */}
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-6">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-white/90">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+              </span>
+              YC F25 • AI Accounting
+            </div>
+
+            {/* Headline */}
+            <h1 className="font-semibold text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] tracking-tight text-white">
+              The Full-Stack
+              <br />
+              <span className="bg-gradient-primary bg-clip-text text-transparent">
+                AI Accountancy
+              </span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-xl">
+              AI agents that pull raw data from your systems and turn it into continuously-reconciled books. Automatically.
+            </p>
+
+            {/* Email Capture Form */}
+            <form onSubmit={handleSubmit} className="max-w-md">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  type="email"
+                  placeholder="Enter your work email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="flex-1 h-12 px-4 bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-gray-400 focus:border-orange-500 focus:ring-orange-500"
+                />
+                <Button
+                  type="submit"
+                  className="h-12 px-6 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              <p className="text-xs text-gray-400 mt-2">
+                No credit card required • Free demo available
+              </p>
+            </form>
+
+            {/* Trust indicators */}
+            <div className="flex items-center gap-6 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                ✓ <span>99%+ accuracy</span>
+              </div>
+              <div className="flex items-center gap-2">
+                ✓ <span>Real-time reconciliation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                ✓ <span>SOC 2 certified</span>
               </div>
             </div>
           </div>
-          {/* Headline split into multiple lines/blocks, even tighter line height */}
-          <div className="col-span-1 md:col-span-8 flex flex-col gap-1">
-            <span className="font-semibold text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tight drop-shadow-xl text-left">
-              The <span className="bg-gradient-primary bg-clip-text text-transparent">Full-stack</span>
-            </span>
-            <span className="font-semibold text-[clamp(2rem,5vw,3.5rem)] text-foreground leading-tight tracking-tight drop-shadow-xl text-left" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif', fontWeight: 600 }}>
-              AI Accountancy 
-            </span>
-            
-            {/* Paragraph and CTA vertically stacked below headline */}
-            <div className="flex flex-col gap-6 mt-6">
-              <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg text-left max-w-md md:max-w-lg lg:max-w-xl" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                Building a new ecosystem for AI agents to do accounting.  
-              </p>
-            <a
-              href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl px-8 py-4 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105 mb-16"
-              style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}
-            >
-              Chat with us
-              <Calendar className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+
+          {/* Right Column - Visual */}
+          <div className="relative lg:block hidden">
+            {/* Placeholder for dashboard mockup */}
+            <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-gray-900 to-black p-6">
+              <div className="space-y-4">
+                {/* Mock terminal header */}
+                <div className="flex items-center gap-2 pb-3 border-b border-white/10">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-gray-400 ml-2">Senitac Dashboard</span>
+                </div>
+
+                {/* Mock content - Transaction flow */}
+                <div className="space-y-3">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-300">Live Transactions</span>
+                      <span className="text-xs text-green-400">● Processing</span>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-xs">
+                        <span className="text-gray-400">Bank Transfer • Chase</span>
+                        <span className="text-white">$2,450.00</span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span className="text-gray-400">Invoice #1234 • Stripe</span>
+                        <span className="text-white">$890.00</span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span className="text-gray-400">Expense • AWS</span>
+                        <span className="text-white">-$245.00</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-orange-500/10 border border-orange-500/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500 animate-pulse"></div>
+                      <span className="text-sm text-orange-300">AI Agent Activity</span>
+                    </div>
+                    <p className="text-xs text-gray-400">
+                      Categorized 247 transactions • Matched 99.6% • Flagged 1 for review
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+                      <div className="text-xs text-gray-400 mb-1">Reconciliation</div>
+                      <div className="text-lg font-semibold text-white">99.8%</div>
+                    </div>
+                    <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+                      <div className="text-xs text-gray-400 mb-1">Processing</div>
+                      <div className="text-lg font-semibold text-white">Real-time</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>
