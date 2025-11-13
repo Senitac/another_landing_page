@@ -13,7 +13,7 @@ export const CTASection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-hero animate-gradient-slow relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-purple-900/10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-3xl"></div>

@@ -23,7 +23,7 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-hero animate-gradient-slow border-t border-b border-white/10 relative">
+    <section className="py-20 border-t border-b border-white/10 relative">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"></div>

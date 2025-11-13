@@ -1,55 +1,57 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, X } from "lucide-react";
-import { useState } from "react";
+import { Calendar } from "lucide-react";
 
 export const HeroSection = () => {
-  const [showDemo, setShowDemo] = useState(false);
 
   return (
-    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
-      {/* Enhanced background glow effects */}
-      <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-orange-700/30 rounded-full blur-[200px] pointer-events-none"></div>
-      <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-black/40 rounded-full blur-[180px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-neutral-900/30 rounded-full blur-[160px] pointer-events-none"></div>
-      <div className="absolute top-1/2 right-1/3 w-[350px] h-[350px] bg-orange-900/30 rounded-full blur-[140px] pointer-events-none"></div>
+    <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 px-6">
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-6">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+              <span className="text-sm font-medium text-white">YC F25</span>
+              <span className="text-white/60">•</span>
+              <span className="text-sm text-white/80">AI Accounting</span>
+            </div>
 
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMCAwJSAxMCUgLyAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4K')] opacity-20 pointer-events-none"></div>
+            {/* Headline */}
+            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+              The <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Full-Stack</span><br />
+              AI Accountancy
+            </h1>
 
-      {/* Main content */}
-      <div className="container max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 pt-24 md:pt-28 px-6 md:px-12">
-        <div className="col-span-1 md:col-span-8 flex flex-col gap-2">
-          {/* Watch Demo Button */}
-          <button
-            type="button"
-            onClick={() => setShowDemo((v) => !v)}
-            className="rounded-2xl bg-white/20 backdrop-blur-md shadow-elegant px-5 py-2 flex items-center gap-3 border border-white/30 w-fit hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400"
-            aria-expanded={showDemo}
-            aria-controls="demo-video-section"
-          >
-            <span className="font-medium text-sm text-white/80">Watch Demo</span>
-            <span className="w-7 h-4 bg-gray-200/60 rounded-lg flex items-center justify-center text-xs text-gray-700">🎬</span>
-          </button>
+            {/* Subheadline */}
+            <p className="text-xl text-white/70 leading-relaxed max-w-xl">
+              Building a new ecosystem for AI agents to do accounting.
+            </p>
 
-          {/* Demo video expandable section */}
-          <div
-            id="demo-video-section"
-            className={`overflow-hidden transition-all duration-500 ${showDemo ? 'max-h-[80vh] mt-6' : 'max-h-0'} w-full`}
-            style={{
-              opacity: showDemo ? 1 : 0,
-              pointerEvents: showDemo ? 'auto' : 'none',
-            }}
-          >
-            <div className="relative">
-              <button
-                onClick={() => setShowDemo(false)}
-                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-black/70 text-white hover:bg-black/90 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"
-                aria-label="Close demo"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <div className="w-full aspect-video max-w-7xl">
+            {/* CTA Button */}
+            <a
+              href="https://calendly.com/nitanshu15/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+            >
+              Chat with us
+              <Calendar className="w-5 h-5" />
+            </a>
+
+            {/* Trust Indicators */}
+            <div className="flex items-center gap-6 text-sm text-white/60 pt-4">
+              <div className="flex items-center gap-2">
+                ✓ <span>99%+ accuracy</span>
+              </div>
+              <div className="flex items-center gap-2">
+                ✓ <span>Real-time reconciliation</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Video */}
+          <div className="relative lg:block">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black/40 backdrop-blur-sm">
+              <div className="aspect-video w-full">
                 <iframe
                   width="100%"
                   height="100%"
@@ -64,33 +66,16 @@ export const HeroSection = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
 
-          {/* Headline */}
-          <div className="col-span-1 md:col-span-8 flex flex-col gap-1">
-            <span className="font-semibold text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tight drop-shadow-xl text-left">
-              The <span className="bg-gradient-primary bg-clip-text text-transparent">Full-stack</span>
-            </span>
-            <span className="font-semibold text-[clamp(2rem,5vw,3.5rem)] text-foreground leading-tight tracking-tight drop-shadow-xl text-left" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif', fontWeight: 600 }}>
-              AI Accountancy
-            </span>
+            {/* Floating Stats */}
+            <div className="absolute -top-4 -right-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
+              <div className="text-xs text-white/60 mb-1">Accuracy</div>
+              <div className="text-2xl font-bold text-green-400">99.8%</div>
+            </div>
 
-            {/* Paragraph and CTA */}
-            <div className="flex flex-col gap-6 mt-6">
-              <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg text-left max-w-md md:max-w-lg lg:max-w-xl" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-                Building a new ecosystem for AI agents to do accounting.
-              </p>
-
-              <a
-                href="https://calendly.com/nitanshu15/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl px-8 py-4 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105 mb-16"
-                style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}
-              >
-                Chat with us
-                <Calendar className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+            <div className="absolute -bottom-4 -left-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
+              <div className="text-xs text-white/60 mb-1">Time Saved</div>
+              <div className="text-2xl font-bold text-orange-400">80%</div>
             </div>
           </div>
         </div>

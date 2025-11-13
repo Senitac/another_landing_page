@@ -14,7 +14,7 @@ export const StatsTickerSection = () => {
   const duplicatedStats = [...stats, ...stats];
 
   return (
-    <section className="py-12 bg-gradient-hero animate-gradient-slow border-y border-white/10 relative overflow-hidden">
+    <section className="py-12 border-y border-white/10 relative overflow-hidden">
       {/* Animated ticker */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none z-10"></div>

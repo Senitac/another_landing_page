@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-hero animate-gradient-slow border-t border-white/10 py-16">
+    <footer className="border-t border-white/10 py-16">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Column 1: Logo + Description */}

@@ -84,7 +84,7 @@ export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 bg-gradient-hero animate-gradient-slow relative">
+    <section className="py-20 relative">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
