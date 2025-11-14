@@ -1,67 +1,152 @@
-import { Calendar } from "lucide-react";
-import { useImagePreloader } from "../hooks/useImagePreloader";
-
-const imageUrl = "/founder_pic.JPG";
+import { Calendar, Linkedin } from "lucide-react";
 
 export const AboutSection = () => {
-  const isImageLoaded = useImagePreloader(imageUrl);
-
   return (
-    <section className="relative min-h-screen w-full bg-gradient-hero animate-gradient-slow overflow-hidden font-satoshi flex flex-col justify-start" style={{ minHeight: '100vh' }}>
-      {/* Background glow effects for consistency */}
-      {/* Removed or reduced top-left glow */}
-      {/* <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[180px] pointer-events-none"></div> */}
-      {/* Main glow moved to bottom right, larger and darker */}
-      <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-orange-700/30 rounded-full blur-[200px] pointer-events-none"></div>
-      <div className="absolute bottom-10 right-20 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-      {/* New dark swirls for depth */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-black/40 rounded-full blur-[180px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-neutral-900/30 rounded-full blur-[160px] pointer-events-none"></div>
-      <div className="absolute top-1/2 right-1/3 w-[350px] h-[350px] bg-orange-900/30 rounded-full blur-[140px] pointer-events-none"></div>
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMCAwJSAxMCUgLyAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4K')] opacity-20 pointer-events-none"></div>
-      {/* Main content grid container with top padding for nav */}
-      <div className="container max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-y-12 pt-24 md:pt-28 px-6 md:px-12">
-        <div className="col-span-1 md:col-span-11 flex flex-col gap-2">
-          <h2 className="text-white font-satoshi font-semibold text-[clamp(2rem,5vw,3.5rem)] leading-tight tracking-tight drop-shadow-xl text-left mb-4">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">Us</span>
-          </h2>
-          <div className="mb-6">
-           {isImageLoaded ? (
+    <section className="relative w-full py-20 overflow-hidden">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Founders Photo - Cinematic Crop */}
+        <div className="mb-16">
+          <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+            <div className="relative w-full" style={{ paddingBottom: '35%' }}>
               <img
-                src={imageUrl}
+                src="/founder_pic.JPG"
                 alt="Senitac Founders"
-                className="w-full max-w-2xl rounded-xl shadow-2xl object-cover border-2 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-orange-500/25 animate-fade-in"
-                style={{ aspectRatio: '16/7', objectPosition: 'center left' }}
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
-            ) : (
-              <div className="w-full max-w-2xl rounded-xl bg-neutral-800/50 animate-pulse" style={{ aspectRatio: '16/7' }} />
-            )}
+            </div>
           </div>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            Hi,
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            We're the founders of <span className="bg-gradient-primary bg-clip-text text-transparent">Senitac</span>, a full-stack, AI accountancy. 
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent">What that means:</span> Our team of AI agents pull raw data directly from your systems (think bank transactions, email, invoices, spreadsheets) and turn it into a continuously-reconciled ledger, so bookkeeping, chasing missing payments, audit evidence and tax classifications are done automatically.
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Why it matters:</span> Clean, verifiable data at the source eliminates re-typing, back-and-forth emails, and months-long audits. Finance teams get instant books; auditors get evidence trails on demand.
-          </p>
-          <p className="text-white text-[clamp(0.95rem,1.2vw,1.1rem)] leading-relaxed drop-shadow-lg mb-1" style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}>
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> Vision:</span> Zero-friction finance done by AI agents. Data flows once, stays accurate forever, and every downstream financial task becomes a click. So your business can move from hindsight to real-time decision making.
-          </p>
+        </div>
+
+        {/* Why We Founded */}
+        <div className="mb-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+            Why we founded <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Senitac</span>
+          </h1>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Left: Problem */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">The Problem</h2>              
+              <div className="text-xl text-white leading-relaxed space-y-4">
+                <p>
+                  Accounting teams spend most of their time <span className="text-orange-400 font-medium">moving data, not making decisions</span> 
+                </p>
+                
+                <p>
+                  We saw this firsthand: entire finance teams stuck on repetitive tasks instead of strategic work. From reading invoices, re-typing, back-and-forth emails, months-long audits, to reconciling ledgers.  
+                </p>
+                <p>
+                  The result: slow closes, messy books, and exhausted accountants.
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Solution */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">Our Solution</h2>
+              <div className="text-xl text-white leading-relaxed space-y-4">
+                <p>
+                  Senitac builds <span className="text-orange-400 font-medium">accountant-in-the-loop agents</span> that handle the grunt work. So finance teams can focus on insights, not inputs.
+                </p>
+                <p>
+                  We don't layer automation on top of messy data. We <span className="text-orange-400 font-medium">start at the source</span>. Clean, verifiable data leads to instant books and full observability.
+                </p>
+                <p>
+                  With Senitac, <span className="text-orange-400 font-medium">one accountant can manage 20x more clients</span>, with cleaner data and zero manual entry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="mb-20">
+          <div className="w-full">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-10">
+              <div className="max-w-4xl mx-auto text-center space-y-4">
+                <h2 className="text-3xl font-semibold text-orange-400">Our Mission</h2>
+                <p className="text-xl text-white leading-relaxed">
+                  Zero-friction finance done by AI agents. Data flows once, stays accurate forever, and every downstream financial task becomes a click so your business can move from hindsight to
+                  <span className="text-orange-400"> real-time decision making.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Founder Profiles */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold text-orange-400 text-center mb-12">
+            The Team
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Nitanshu */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
+                  <img
+                    src="/Nitanshu_headshot.png"
+                    alt="Nitanshu Limbachiya"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">Nitanshu Limbachiya</h3>
+                  <p className="text-white/60 text-xl mb-2">Co-Founder & CEO</p>
+                  <a
+                    href="https://www.linkedin.com/in/nitanshu-limbachiya/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors text-sm"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+              <p className="text-xl text-white/70 leading-relaxed">
+                At Senitac, Nitanshu owns product and agent design. Before founding Senitac, he pursued an MSc in Machine Learning at UCL, conducted multi-agent systems research with DARK Lab and Meta, and shadowed finance teams to redesign month-end around exception-first workflows.
+              </p>
+            </div>
+
+            {/* Sebastian */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
+                  <img
+                    src="/Seb_headshot.png"
+                    alt="Sebastian Sigurdarson"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">Sebastian Sigurdarson</h3>
+                  <p className="text-white/60 text-xl mb-2">Co-Founder & CTO</p>
+                  <a                    href="https://www.linkedin.com/in/sebastiansigur/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors text-sm"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+              <p className="text-xl text-white/70 leading-relaxed">
+                Sebastian leads tech at Senitac, from infra to idempotent posting, and audit-ready reconciliation. Before founding Senitac, he pursued an MSc in Machine Learning at UCL, and he was in R&D at Cosine Therapeutics, where he shipped ML-driven data systems used in production.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
           <a
-              href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl px-8 py-4 mb-8 text-base shadow-glow font-semibold whitespace-nowrap w-fit bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center hover:from-orange-600 hover:to-orange-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 transform hover:scale-105"
-              style={{ fontFamily: 'Satoshi, Inter, system-ui, sans-serif' }}
-            >
-              Talk to us
-              <Calendar className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            href="https://calendly.com/nitanshu15/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+          >
+            Book a Demo
+            <Calendar className="w-5 h-5" />
           </a>
         </div>
       </div>

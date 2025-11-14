@@ -1,16 +1,52 @@
 export const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="py-8 bg-background border-t border-border">
-      <div className="container mx-auto px-6 text-center">
-        <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-          Senitac
+    <footer className="border-t border-white/10 py-12" aria-label="Footer">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Brand + tagline */}
+        <div className="flex flex-col items-center text-center gap-4">
+          <div className="flex items-center gap-3">
+            <img
+              src="/senitac_logo_2048.png"
+              alt="Senitac logo"
+              className="h-10 w-10"
+            />
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Senitac
+            </span>
+          </div>
+
+          <p className="text-sm text-white/60">
+            Building the future of finance
+          </p>
+
+          {/* Contact actions */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="mailto:accountants@senitac.co"
+              className="text-sm text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
+            >
+              accountants@senitac.co
+            </a>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <a
+              href="https://calendly.com/nitanshu15/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
+            >
+              Book a demo
+            </a>
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground mb-4">
-          Building the future of accounting with AI
-        </p>
-        <p className="text-xs text-muted-foreground">
-          © 2025 Senitac. Coming soon.
-        </p>
+
+        {/* Bottom line */}
+        <div className="mt-8 border-t border-white/10 pt-6">
+          <p className="text-xs text-white/60 text-center">
+            © {year} Senitac Ltd. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
