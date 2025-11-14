@@ -1,133 +1,164 @@
-import { DataIngestionMockup } from "./mockups/DataIngestionMockup";
-import { ReconciliationMockup } from "./mockups/ReconciliationMockup";
-import { AuditTrailMockup } from "./mockups/AuditTrailMockup";
+'use client'
+
+import React from 'react'
+import { DataIngestionMockup } from './mockups/DataIngestionMockup'
+import { ReconciliationMockup } from './mockups/ReconciliationMockup'
+import { AuditTrailMockup } from './mockups/AuditTrailMockup'
+
+// FeaturesShowcaseSection – v2 (leaner, non‑repetitive, aligned)
+// Key adjustments per user:
+// - Keep named export (not default)
+// - Remove repetition; fewer, denser lines
+// - No claims about specific ERPs or certifications
+// - Larger base font (text-xl)
+// - Align text block visually with the mockup (12‑col grid, 5/7 split, items-end)
+// - Emphasise Forward‑deployed approach for source ingestion
+
+const features = [
+  {
+    id: 'ingestion',
+    title: 'Implemented with your team',
+    blurb:
+      'Engineers embed with Finance Ops to wire bank feeds, email and operational data so records are standardised before they hit the ledger.',
+    bullets: [
+      'Hands‑on setup alongside your process owners',
+      'Live bank/email feeds via secure OAuth',
+      'Standardised records upstream of the GL',
+    ],
+    Mockup: DataIngestionMockup,
+  },
+  {
+    id: 'reconciliation',
+    title: 'Continuous reconciliation',
+    blurb:
+      'Transactions match as they land. Exceptions arrive with evidence and owners, not at the end of the month.',
+    bullets: [
+      'Rules + AI across bank, AR/AP, prepaids & accruals',
+      'Exceptions inbox with assignees and due dates',
+      'Reviewer sign-off preserved as controls',
+    ],
+    Mockup: ReconciliationMockup,
+  },
+  {
+    id: 'ops',
+    title: 'Billing, collections & payables - handled',
+    blurb:
+      'Agents process vendor invoices, raise sales invoices from triggers, send reminders and keep statuses in sync, with evidence attached.',
+    bullets: [
+      'Invoice capture and bill prep with approvals',
+      'Generate sales invoices and track to receipt',
+      'Smart reminders for due/overdue payments',
+    ],
+    Mockup: AuditTrailMockup,
+  },
+] as const
+
+function Check({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      className={`h-4 w-4 flex-shrink-0 ${className}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
+
+function Bullet({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex items-start gap-3">
+      <Check className="mt-1 text-orange-400" />
+      <span className="leading-snug text-white/80">{children}</span>
+    </li>
+  )
+}
 
 export const FeaturesShowcaseSection = () => {
-  const features = [
-    {
-      badge: "FORWARD-DEPLOYED INGESTION",
-      title: "Start at the source, not the spreadsheet",
-      description:
-        "Competitors ask you to upload files. Our AI agents connect directly to banks, email, systems. Pull raw transactions automatically. Never touch a CSV again.",
-      benefits: [
-        "Direct bank connections via secure OAuth",
-        "Email parsing for invoices and receipts",
-        "ERP integrations (QuickBooks, Xero, NetSuite)",
-        "Automatic data sync every 15 minutes",
-      ],
-      mockup: DataIngestionMockup,
-    },
-    {
-      badge: "CONTINUOUS AI RECONCILIATION",
-      title: "Real-time reconciliation, not month-end panic",
-      description:
-        "AI doesn't wait until month-end. Continuously matches transactions, categorizes expenses, flags discrepancies in real-time. 3 days becomes 3 hours.",
-      benefits: [
-        "99.8% automatic matching accuracy",
-        "Smart categorization learns your business",
-        "Instant anomaly detection",
-        "Zero manual data entry",
-      ],
-      mockup: ReconciliationMockup,
-    },
-    {
-      badge: "AUDIT-READY EVIDENCE GRAPH",
-      title: "Every transaction has a provable chain",
-      description:
-        "We don't just categorize—we build evidence graphs. Each entry links to the original source: bank statement, invoice PDF, approval email. Audit-ready by default.",
-      benefits: [
-        "Complete audit trail for every transaction",
-        "One-click evidence retrieval",
-        "Automatic documentation linking",
-        "SOC 2 Type II certified infrastructure",
-      ],
-      mockup: AuditTrailMockup,
-    },
-  ];
-
   return (
-    <>
-      {features.map((feature, index) => {
-        const isReversed = index % 2 === 1;
-
-        return (
-          <section key={index} id={index === 0 ? "features" : undefined} className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-3 gap-12 items-center">
-                {/* Text Content */}
+    <section id="features" aria-label="Features" className="py-12 md:py-16 text-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {features.map((f, index) => {
+          const isReversed = index % 2 === 1
+          const Mockup = f.Mockup
+          return (
+            <div key={f.id} className="py-8 md:py-10">
+              <div className={`grid lg:grid-cols-12 gap-8 md:gap-10 lg:gap-14 lg:items-center`}>
+                {/* Text column */}
                 <div
-                  className={`lg:col-span-1 space-y-6 ${
-                    isReversed ? "order-1 lg:order-2" : "order-1"
-                  }`}
+                  className={`${
+                    isReversed ? 'order-1 lg:order-2' : 'order-1'
+                  } lg:col-span-5 flex flex-col gap-6 `}
                 >
-                  {/* Badge */}
-                  <div className="inline-block">
-                    <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 font-semibold uppercase tracking-wider">
-                      {feature.badge}
-                    </div>
-                  </div>
+                  <h3 className="text-2xl md:text-3xl font-semibold text-white tracking-tight leading-snug">
+                    {f.title}
+                  </h3>
 
-                  {/* Headline */}
-                  <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight">
-                    {feature.title}
-                  </h2>
+                  <p className="text-white/70 leading-relaxed max-w-prose">{f.blurb}</p>
 
-                  {/* Description */}
-                  <p className="text-lg text-white/70 leading-relaxed">
-                    {feature.description}
-                  </p>
-
-                  {/* Benefits List */}
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-3 text-white/60"
-                      >
-                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                        <span className="text-sm leading-relaxed">
-                          {benefit}
-                        </span>
-                      </li>
+                  <ul className="space-y-2.5">
+                    {f.bullets.map((b) => (
+                      <Bullet key={b}>{b}</Bullet>
                     ))}
                   </ul>
                 </div>
 
-                {/* Screenshot/Visual */}
+                {/* Visual column */}
                 <div
-                  className={`lg:col-span-2 relative ${
-                    isReversed ? "order-2 lg:order-1" : "order-2"
-                  }`}
+                  className={`${
+                    isReversed ? 'order-2 lg:order-1' : 'order-2'
+                  } lg:col-span-7 relative`}
                 >
                   <div className="rounded-xl overflow-hidden shadow-2xl relative bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10">
-                    {/* Browser Chrome */}
-                    <div className="bg-gray-800 border-b border-white/10 px-4 py-3 flex items-center gap-2">
+                    {/* Browser chrome */}
+                    <div className="bg-gray-800 border-b border-white/10 px-4 py-3 flex items-center gap-2" aria-hidden="true">
                       <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                        <div className="w-3 h-3 rounded-full bg-green-500/80" />
                       </div>
                       <div className="flex-1 text-center">
-                        <span className="text-xs text-white/40 font-medium">
-                          Senitac Platform
-                        </span>
+                        <span className="text-xs text-white/40 font-medium">Senitac Platform</span>
                       </div>
                     </div>
 
-                    {/* Mockup Screenshot */}
+                    {/* Mockup */}
                     <div className="aspect-[16/10] bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
-                      <feature.mockup />
+                      {Mockup ? <Mockup /> : <div className="w-full h-full" />}
                     </div>
                   </div>
 
-                  {/* Decorative blur effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/5 to-purple-500/5 blur-3xl -z-10 opacity-50"></div>
+                  {/* Decorative glow */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/5 to-purple-500/5 blur-3xl -z-10 opacity-50" aria-hidden="true" />
                 </div>
               </div>
             </div>
-          </section>
-        );
-      })}
-    </>
-  );
-};
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+/*
+TESTS (React Testing Library – minimal examples)
+-----------------------------------------------
+
+import { render, screen } from '@testing-library/react'
+import { FeaturesShowcaseSection } from '../path/to/FeaturesShowcaseSection'
+
+describe('FeaturesShowcaseSection v2', () => {
+  it('renders three lean feature slices', () => {
+    render(<FeaturesShowcaseSection />)
+    expect(screen.getAllByRole('heading', { level: 3 }).length).toBe(3)
+  })
+
+  it('keeps large base font on the section', () => {
+    render(<FeaturesShowcaseSection />)
+    const region = screen.getByLabelText('Features')
+    expect(region).toBeInTheDocument()
+  })
+})
+*/

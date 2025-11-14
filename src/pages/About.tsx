@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { AboutSection } from "../components/AboutSection";
 import { Footer } from "../components/Footer";
 import { Navigation } from "../components/Navigation";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   return (
     <div className="relative w-full min-h-screen">
       {/* Optimized gradient background - matches homepage */}

@@ -1,23 +1,22 @@
 import { Calendar } from "lucide-react";
 
 export const HeroSection = () => {
-
   return (
-    <section className="relative w-full overflow-hidden min-h-screen flex items-center px-6">
+    <section className="relative w-full overflow-hidden px-6 pt-28 pb-16 lg:pt-36 lg:pb-20 flex items-center hero-full-viewport">
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Column - Content */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             {/* Headline */}
-            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.08]">
               The <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Full-Stack</span><br />
               AI Accounting Firm
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl text-white/70 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-xl">
               AI agents ingest data from source, reconcile continuously.<br />
-              One accountant. 20× more clients.
+              One accountant. 20x more output.
             </p>
 
             {/* CTA Button */}
@@ -25,21 +24,11 @@ export const HeroSection = () => {
               href="https://calendly.com/nitanshu15/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
             >
               Chat with us
               <Calendar className="w-5 h-5" />
             </a>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center gap-6 text-sm text-white/60 pt-4">
-              <div className="flex items-center gap-2">
-                ✓ <span>99%+ accuracy</span>
-              </div>
-              <div className="flex items-center gap-2">
-                ✓ <span>Real-time reconciliation</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Video */}

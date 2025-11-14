@@ -1,9 +1,18 @@
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleFeaturesClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === "/") {
+      event.preventDefault();
+      const target = document.getElementById("features");
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
@@ -25,18 +34,19 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">
-            <a
-              href="/#features"
+            <Link
+              to="/#features"
               className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
+              onClick={handleFeaturesClick}
             >
               Features
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-sm font-medium text-white rounded-lg h-9 flex items-center px-4 hover:bg-white/5 transition-colors"
             >
               About
-            </a>
+            </Link>
             <a
               href="https://calendly.com/nitanshu15/30min"
               target="_blank"
@@ -66,20 +76,23 @@ export const Navigation = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-2">
-            <a
-              href="/#features"
+            <Link
+              to="/#features"
               className="block px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-white/5 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(event) => {
+                handleFeaturesClick(event);
+                setMobileMenuOpen(false);
+              }}
             >
               Features
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="block px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-white/5 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </a>
+            </Link>
             <a
               href="https://calendly.com/nitanshu15/30min"
               target="_blank"

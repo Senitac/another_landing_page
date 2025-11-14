@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { WhyItMattersSection } from "@/components/WhyItMattersSection";
@@ -10,6 +12,15 @@ import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#features") {
+      const target = document.getElementById("features");
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location]);
+
   return (
     <div className="relative w-full">
       {/*
@@ -27,8 +38,6 @@ const Index = () => {
         <HeroSection />
         <WhyItMattersSection />
         <FeaturesShowcaseSection />
-        <HowItWorksSection />
-        <TransactionMatchingGame />
         <EnterpriseTickerSection />
         <CTASection />
         <FAQSection />

@@ -73,6 +73,10 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Global scale factor to shrink the UI without asking users to zoom out */
+    --app-scale: 0.85;
+    --hero-min-height: calc(100vh / var(--app-scale));
   }
 
   .dark {
@@ -121,6 +125,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    zoom: var(--app-scale);
+    overflow-x: hidden;
+  }
+}
+
+@supports not (zoom: 0.85) {
+  body {
+    transform: scale(var(--app-scale));
+    transform-origin: top center;
+    width: calc(100% / var(--app-scale));
+    min-height: calc(100vh / var(--app-scale));
   }
 }
 
@@ -129,4 +144,8 @@ All colors MUST be HSL.
   will-change: auto;
   backface-visibility: hidden;
   transform: translateZ(0);
+}
+
+.hero-full-viewport {
+  min-height: var(--hero-min-height, 100vh);
 }

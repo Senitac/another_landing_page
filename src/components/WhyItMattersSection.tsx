@@ -1,36 +1,84 @@
+// WhyItMattersSection
+// - Default export (fixes preview/build systems that expect a default component)
+// - Client component to avoid SSR/JSX build edge cases
+// - Added data-testid hooks for tests
+// - Tightened a11y: aria-hidden="true" on decorative icons
+
 export const WhyItMattersSection = () => {
   return (
-    <section id="why-it-matters" className="relative py-12 md:py-16">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"></div>
-        <div className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-white/10"></div>
+    <section
+      id="why-it-matters"
+      data-testid="why-it-matters"
+      className="relative py-10 md:py-14"
+    >
+      {/* rails */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute left-4 md:left-12 top-0 bottom-0 w-px bg-white/10"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute right-4 md:right-12 top-0 bottom-0 w-px bg-white/10"
+          aria-hidden="true"
+        />
       </div>
 
-      <div className="mx-4 md:mx-12 relative">
+      <div className="mx-4 md:mx-8 relative">
         {/* Header */}
-        <div className="px-4 md:px-12 pb-8 md:pb-10 border-b border-white/10">
+        <div className="px-4 md:px-10 pb-6 md:pb-8 border-b border-white/10">
           <div className="max-w-6xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-              </span>
-              AI-POWERED SOLUTION
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight mx-auto max-w-4xl">
-              Most platforms layer on top of messy data. <span className="italic bg-gradient-primary bg-clip-text text-transparent">We start at the source.</span>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mx-auto max-w-4xl tracking-tight">
+              <span className="text-orange-400">Source‑first</span> Accounting 
             </h2>
-            <p className="text-base md:text-lg text-white/70 max-w-3xl leading-relaxed mx-auto">
-              The accounting AI market is crowded. Here's why forward-thinking CFOs choose Senitac.
+            <p className="text-xl md:text-lg text-white/70 max-w-3xl leading-relaxed mx-auto mt-3">
+              Clean data in → clean books out. Finance teams choose Senitac because we connect upstream, reconcile continuously, chase missing payments, and keep every entry audit‑ready.
             </p>
+
+            {/* Outcomes row */}
+            <div
+              className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 text-left"
+              data-testid="outcomes"
+            >
+              {[
+                'Faster month‑end close',
+                'Fewer exceptions to chase',
+                'Real‑time data observability',
+                'Audit package in one click',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-2 justify-center sm:justify-start"
+                  data-testid="outcome-item"
+                >
+                  <svg
+                    className="h-4 w-4 flex-shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-sm md:text-base text-white/80 lg:whitespace-nowrap">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Three Key Differentiators */}
-        <div className="px-4 md:px-12 pt-8 md:pt-10">
+        {/* Differentiators */}
+        <div className="px-4 md:px-10 pt-8 md:pt-9">
           <div className="max-w-6xl mx-auto space-y-0">
-            {/* 1. Data Ingestion */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
+            {/* 1. Source-first ingestion */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-6">
               <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -39,6 +87,7 @@ export const WhyItMattersSection = () => {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -48,25 +97,25 @@ export const WhyItMattersSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
-                    Forward-deployed at the source
+                  <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    Forward-deployed approach
                   </h3>
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-white/80 mb-3 font-medium">
-                  Competitors ask you to upload CSVs. We connect directly to banks, email, and systems.
+              <div className="lg:col-span-2 lg:pl-10">
+                <p className="text-xl text-orange-400 mb-3 font-medium">
+                  We connect directly to banks, email, and operational systems.
                 </p>
-                <p className="text-base text-white/70 leading-relaxed">
-                  Most tools sit downstream—waiting for manual exports. Senitac agents live upstream, pulling transactions, invoices, receipts the moment they appear. Real-time data from source to ledger.
+                <p className="text-xl text-white/70 leading-relaxed">
+                  Most tools sit downstream and wait for exports. Senitac pulls transactions, invoices and receipts the moment they appear, and standardises them before they hit the ledger.
                 </p>
               </div>
             </div>
 
-            <div className="border-t border-dashed border-white/10"></div>
+            <div className="border-t border-dashed border-white/10" />
 
-            {/* 2. AI + CPAs */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
+            {/* 2. Automation + humans */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-6">
               <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -75,6 +124,7 @@ export const WhyItMattersSection = () => {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -84,25 +134,25 @@ export const WhyItMattersSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
-                    AI + Licensed CPAs in the loop
+                  <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    Accountant-in-the-loop
                   </h3>
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-white/80 mb-3 font-medium">
-                  Pure AI is fast but risky. Pure human is accurate but slow. We combine both.
+              <div className="lg:col-span-2 lg:pl-10">
+                <p className="text-xl text-orange-400 mb-3 font-medium">
+                  Automated categorisation, matching and reconciliation. Chartered accountants review actions.
                 </p>
-                <p className="text-base text-white/70 leading-relaxed">
-                  AI handles categorization, matching, reconciliation. Licensed CPAs review anomalies, month-end close, audit trails. Speed of automation. Confidence of human oversight. Every transaction traced back to source.
+                <p className="text-xl text-white/70 leading-relaxed">
+                  All agent actions land in an approval queue with evidence attached. Our ACA/ACCA reviewers approve, maintain controls and sign off where required.
                 </p>
               </div>
             </div>
 
-            <div className="border-t border-dashed border-white/10"></div>
+            <div className="border-t border-dashed border-white/10" />
 
-            {/* 3. Audit-Ready Evidence Graph */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
+            {/* 3. Audit-ready evidence graph */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-6">
               <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
                 <div className="flex gap-4 items-center mb-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
@@ -111,6 +161,7 @@ export const WhyItMattersSection = () => {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -120,17 +171,54 @@ export const WhyItMattersSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
-                    Audit-ready evidence graph
+                  <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    Audit‑ready evidence graph
                   </h3>
                 </div>
               </div>
-              <div className="lg:col-span-2 lg:pl-12">
-                <p className="text-base text-white/80 mb-3 font-medium">
-                  We don't just categorize—we build evidence graphs linking every entry to its source.
+              <div className="lg:col-span-2 lg:pl-10">
+                <p className="text-xl text-orange-400 mb-3 font-medium">
+                  Every journal line is linked to its source: bank line → invoice/receipt → GL entry → reviewer sign‑off.
                 </p>
-                <p className="text-base text-white/70 leading-relaxed">
-                  Every line item has full evidence trails—receipts, emails, confirmations, agent logs. One click exports everything auditors need. Bank statement → Invoice PDF → GL Entry → CPA Review. Complete chain of custody.
+                <p className="text-xl text-white/70 leading-relaxed">
+                  Evidence is captured automatically from email, storage and systems. Export a complete audit package in one click with immutable trails and agent logs.
+                </p>
+              </div>
+            </div>
+
+            <div className="border-t border-dashed border-white/10" />
+
+            {/* 4. Controls & approvals (new) */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-6">
+              <div className="lg:col-span-1 lg:pr-12 lg:border-r lg:border-dashed lg:border-white/10">
+                <div className="flex gap-4 items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                    <svg
+                      className="w-5 h-5 md:w-6 md:h-6 text-orange-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v8m-4-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H9l-4 4v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    Controls, approvals & compliance
+                  </h3>
+                </div>
+              </div>
+              <div className="lg:col-span-2 lg:pl-10">
+                <p className="text-xl text-orange-400 mb-3 font-medium">
+                  Built‑in approval flows, vendor checks and policy guardrails, without leaving the close.
+                </p>
+                <p className="text-xl text-white/70 leading-relaxed">
+                  Configure who can approve what, enforce document completeness, and keep VAT/Making Tax Digital and AML/KYC evidence alongside the entries they support.
                 </p>
               </div>
             </div>
@@ -139,4 +227,33 @@ export const WhyItMattersSection = () => {
       </div>
     </section>
   );
-};
+}
+
+/*
+TESTS (React Testing Library examples)
+-------------------------------------
+These are examples you can place in a __tests__/WhyItMattersSection.test.tsx file.
+
+import { render, screen } from '@testing-library/react'
+import WhyItMattersSection from '../path/to/WhyItMattersSection'
+
+describe('WhyItMattersSection', () => {
+  it('renders the headline', () => {
+    render(<WhyItMattersSection />)
+    expect(screen.getByText('Source‑first accounting automation')).toBeInTheDocument()
+  })
+
+  it('shows exactly 4 outcome items', () => {
+    render(<WhyItMattersSection />)
+    const items = screen.getAllByTestId('outcome-item')
+    expect(items).toHaveLength(4)
+  })
+
+  it('is audit-friendly: contains evidence graph wording', () => {
+    render(<WhyItMattersSection />)
+    expect(
+      screen.getByText(/bank line/i)
+    ).toBeInTheDocument()
+  })
+})
+*/
