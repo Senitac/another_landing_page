@@ -17,12 +17,12 @@ export const Navigation = () => {
             About Us
           </a>
           <a
-            href="https://calendly.com/nitanshu15/30min" // Replace with your actual Calendly link
+            href="https://calendly.com/nitanshu15/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="h-8 px-4 text-sm font-medium flex items-center bg-primary text-primary-foreground rounded-full shadow-elegant hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            Get in Touch
+            Book a Demo
           </a>
         </div>
       </div>

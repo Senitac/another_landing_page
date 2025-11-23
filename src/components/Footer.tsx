@@ -6,10 +6,10 @@ export const Footer = () => {
           Senitac
         </div>
         <p className="text-sm text-muted-foreground mb-4">
-          Building the future of accounting with AI
+          AI-Powered Financial Operations Platform
         </p>
         <p className="text-xs text-muted-foreground">
-          © 2025 Senitac. Coming soon.
+          © 2025 Senitac. All rights reserved.
         </p>
       </div>
     </footer>

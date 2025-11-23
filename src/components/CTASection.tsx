@@ -21,25 +21,35 @@ export const CTASection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-display font-bold text-foreground mb-6">
-            Ready to Transform{" "}
+            Ready to Automate{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Your Practice?
+              Your Finance Operations?
             </span>
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join the waiting list and be among the first to experience the future 
-            of AI-powered accounting. Let's build something extraordinary together.
+            See how AI agents can eliminate manual bookkeeping and deliver real-time financial accuracy.
+            Book a demo to learn how Senitac works with your existing systems.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="xl" className="group">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule a Call
-            </Button>
-            <Button variant="outline" size="xl" className="group">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Get in Touch
-            </Button>
+            <a
+              href="https://calendly.com/nitanshu15/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="xl" className="group">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book a Demo
+              </Button>
+            </a>
+            <a
+              href="mailto:hello@senitac.com"
+            >
+              <Button variant="outline" size="xl" className="group">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Contact Sales
+              </Button>
+            </a>
           </div>
           
           <div className="max-w-md mx-auto">
