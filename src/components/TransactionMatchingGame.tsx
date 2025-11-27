@@ -190,11 +190,11 @@ export const TransactionMatchingGame = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <div className="inline-block mb-3">
-            <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 font-semibold uppercase tracking-wider">
+            <div className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 font-normal uppercase tracking-wider">
               Train Your AI Recognition
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-normal text-white mb-3">
             Bank Reconciliation Challenge
           </h2>
           <p className="text-base text-white/70 mb-2">
@@ -214,22 +214,22 @@ export const TransactionMatchingGame = () => {
             <div className="flex items-center gap-8 font-mono text-sm">
               <div>
                 <span className="text-white/60">MONTH: </span>
-                <span className="font-bold text-white">{level.month}</span>
+                <span className="font-normal text-white">{level.month}</span>
               </div>
               <div>
                 <span className="text-white/60">SCORE: </span>
-                <span className="font-bold text-white">{score.toString().padStart(6, "0")}</span>
+                <span className="font-normal text-white">{score.toString().padStart(6, "0")}</span>
               </div>
               <div>
                 <span className="text-white/60">TIME: </span>
-                <span className="font-bold text-white">
+                <span className="font-normal text-white">
                   {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, "0")}
                 </span>
               </div>
             </div>
             <button
               onClick={resetLevel}
-              className="px-3 py-1 bg-white/10 border border-white/20 text-white text-xs font-bold rounded hover:bg-white/20 transition-colors"
+              className="px-3 py-1 bg-white/10 border border-white/20 text-white text-xs font-normal rounded hover:bg-white/20 transition-colors"
             >
               RESET
             </button>
@@ -253,7 +253,7 @@ export const TransactionMatchingGame = () => {
           <div className="text-center py-12">
             <button
               onClick={startGame}
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow text-lg"
+              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-normal rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow text-lg"
             >
               Start Challenge
             </button>
@@ -263,7 +263,7 @@ export const TransactionMatchingGame = () => {
             {/* Bank Transactions */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden">
               <div className="bg-green-700/80 text-white p-3 border-b border-white/10">
-                <h3 className="font-bold text-sm flex items-center font-mono">
+                <h3 className="font-normal text-sm flex items-center font-mono">
                   🏦 BANK TRANSACTIONS
                 </h3>
               </div>
@@ -299,7 +299,7 @@ export const TransactionMatchingGame = () => {
                           <div className="text-white/40 text-[10px]">{transaction.type}</div>
                         </div>
                         <div className="text-right ml-2">
-                          <span className="font-bold text-white">
+                          <span className="font-normal text-white">
                             ${transaction.amount.toLocaleString()}
                           </span>
                         </div>
@@ -313,7 +313,7 @@ export const TransactionMatchingGame = () => {
             {/* GL Entries */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden">
               <div className="bg-blue-800/80 text-white p-3 border-b border-white/10">
-                <h3 className="font-bold text-sm flex items-center font-mono">
+                <h3 className="font-normal text-sm flex items-center font-mono">
                   📊 GENERAL LEDGER
                 </h3>
               </div>
@@ -341,7 +341,7 @@ export const TransactionMatchingGame = () => {
                           <div className="text-white/40 text-[10px]">{entry.category}</div>
                         </div>
                         <div className="text-right ml-2">
-                          <span className="font-bold text-white">
+                          <span className="font-normal text-white">
                             ${entry.amount.toLocaleString()}
                           </span>
                         </div>
@@ -356,7 +356,7 @@ export const TransactionMatchingGame = () => {
 
         {showSuccess && (
           <div className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-center">
-            <p className="text-green-400 font-semibold">
+            <p className="text-green-400 font-normal">
               ✓ Level {currentLevel + 1} Complete! {currentLevel < LEVELS.length - 1 ? "Moving to next level..." : "Challenge completed!"}
             </p>
           </div>

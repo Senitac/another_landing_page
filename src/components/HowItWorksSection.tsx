@@ -51,7 +51,7 @@ export const HowItWorksSection = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
             HOW IT WORKS
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
             Raw data to <span className="bg-gradient-primary bg-clip-text text-transparent">clean books</span> in 3 steps
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export const HowItWorksSection = () => {
               {/* Step card */}
               <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group flex-1">
                 {/* Step number */}
-                <div className="absolute -top-4 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-bold">
+                <div className="absolute -top-4 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-normal">
                   {step.number}
                 </div>
 
@@ -76,7 +76,7 @@ export const HowItWorksSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-normal text-white mb-3">
                   {step.title}
                 </h3>
 
@@ -108,7 +108,7 @@ export const HowItWorksSection = () => {
             href="https://calendly.com/nitanshu15/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-normal rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
           >
             Get Started Today
             <CheckCircle className="w-5 h-5" />

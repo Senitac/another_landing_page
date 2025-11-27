@@ -1,54 +1,38 @@
-import { Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden px-6 pt-28 pb-16 lg:pt-36 lg:pb-20 flex items-center hero-full-viewport">
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="space-y-5">
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.08]">
-              The <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Full-Stack</span><br />
-              AI Accounting Firm
-            </h1>
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Headline */}
+          <h1 className="text-4xl md:text-5xl lg:text-[64px] font-normal text-white leading-[1.08] tracking-tight">
+            Your Finance Operations. <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Automated</span>
+          </h1>
 
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-xl">
-              AI agents ingest data from source, reconcile continuously.<br />
-              One accountant. 20x more output.
-            </p>
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl lg:text-2xl font-light text-white/70 leading-relaxed max-w-3xl mx-auto">
+            We engineer and implement a custom stack of AI agents tailored to your specific needs.
+          </p>
 
-            {/* CTA Button */}
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a
               href="https://calendly.com/nitanshu15/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-normal rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow text-base md:text-lg"
             >
-              Chat with us
-              <Calendar className="w-5 h-5" />
+              Book a Demo
+              <ArrowRight className="w-5 h-5" />
             </a>
-          </div>
-
-          {/* Right Column - Video */}
-          <div className="relative lg:block">
-            <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black/40 backdrop-blur-sm">
-              <div className="aspect-video w-full">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/80s7QQzwSyo?rel=0&modestbranding=1&vq=hd1080"
-                  title="Demo Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                  loading="lazy"
-                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                ></iframe>
-              </div>
-            </div>
+            <a
+              href="#how-it-works"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white/20 text-white font-normal rounded-lg hover:border-white/40 hover:bg-white/5 transition-all duration-300 text-base md:text-lg"
+            >
+              See How It Works
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

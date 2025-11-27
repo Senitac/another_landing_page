@@ -12,12 +12,12 @@ export const Footer = () => {
               alt="Senitac logo"
               className="h-10 w-10"
             />
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-2xl font-normal bg-gradient-primary bg-clip-text text-transparent">
               Senitac
             </span>
           </div>
 
-          <p className="text-sm text-white/60">
+          <p className="text-sm font-light text-white/60">
             Building the future of finance
           </p>
 
@@ -25,7 +25,7 @@ export const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:accountants@senitac.co"
-              className="text-sm text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
+              className="text-sm font-light text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
             >
               accountants@senitac.co
             </a>
@@ -34,7 +34,7 @@ export const Footer = () => {
               href="https://calendly.com/nitanshu15/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
+              className="text-sm font-light text-white/80 hover:text-white transition-colors underline decoration-white/20 underline-offset-4"
             >
               Book a demo
             </a>
@@ -43,7 +43,7 @@ export const Footer = () => {
 
         {/* Bottom line */}
         <div className="mt-8 border-t border-white/10 pt-6">
-          <p className="text-xs text-white/60 text-center">
+          <p className="text-xs font-light text-white/60 text-center">
             © {year} Senitac Ltd. All rights reserved.
           </p>
         </div>

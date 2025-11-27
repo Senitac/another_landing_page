@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    font-family: 'Satoshi', 'Inter', system-ui, sans-serif;
+    font-family: 'Satoshi', 'Google Sans Flex', system-ui, sans-serif;
     --background: 0 0% 2%;
     --foreground: 0 0% 98%;
 
@@ -52,9 +52,14 @@ All colors MUST be HSL.
       hsl(24 35% 8%) 75%,
       hsl(24 30% 6%) 100%
     );
-    
+
     --shadow-elegant: 0 10px 30px -10px hsl(24 95% 58% / 0.3);
     --shadow-glow: 0 0 40px hsl(24 95% 58% / 0.15);
+
+    /* Professional accent colors for finance/enterprise */
+    --teal-accent: 186 94% 62%;      /* Teal for trust signals */
+    --blue-accent: 217 91% 60%;       /* Professional blue */
+    --slate-accent: 215 16% 47%;      /* Slate for secondary elements */
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 

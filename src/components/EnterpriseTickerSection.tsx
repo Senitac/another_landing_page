@@ -28,7 +28,7 @@ export const EnterpriseTickerSection = () => {
         <div className="bg-[#222224] rounded-lg px-4 py-5 sm:px-5 sm:py-6 lg:px-6 lg:py-6 overflow-hidden">
           {/* Heading */}
           <div className="mb-4 sm:mb-6">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold leading-snug tracking-tight text-white">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-normal leading-snug tracking-tight text-white">
               Enterprise-grade security.
               <br />
               Accountant‑backed accuracy.
@@ -45,7 +45,7 @@ export const EnterpriseTickerSection = () => {
                       <span className="font-mono text-[10px] sm:text-xs text-gray-400 uppercase tracking-[0.2em]">
                         {stat.label}
                       </span>
-                      <span className="font-mono text-xs sm:text-sm text-white font-medium">
+                      <span className="font-mono text-xs sm:text-sm text-white font-normal">
                         {stat.value}
                       </span>
                       <span className="font-mono text-[10px] sm:text-xs text-emerald-400">
@@ -60,7 +60,7 @@ export const EnterpriseTickerSection = () => {
 
           {/* Subheading */}
           <div className="mb-6 sm:mb-7">
-            <h3 className="text-base sm:text-lg font-medium text-white">Why businesses trust Senitac</h3>
+            <h3 className="text-base sm:text-lg font-normal text-white">Why businesses trust Senitac</h3>
           </div>
 
           {/* Cards */}
@@ -92,7 +92,7 @@ export const EnterpriseTickerSection = () => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-md bg-emerald-500/10">
                   <span className="text-xl">{feature.icon}</span>
                 </div>
-                <h4 className="mt-3 text-base font-semibold text-white tracking-tight">
+                <h4 className="mt-3 text-base font-normal text-white tracking-tight">
                   {feature.title}
                 </h4>
                 <div className="mt-2 w-full h-px bg-white/10" aria-hidden="true" />

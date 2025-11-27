@@ -26,7 +26,7 @@ export const StatsTickerSection = () => {
                 <span className="font-mono text-xs sm:text-sm text-white/60 uppercase tracking-wider">
                   {stat.label}
                 </span>
-                <span className="font-mono text-sm sm:text-base text-white font-medium">
+                <span className="font-mono text-sm sm:text-base text-white font-normal">
                   {stat.value}
                 </span>
                 <span className="font-mono text-xs sm:text-sm text-green-400">
@@ -41,7 +41,7 @@ export const StatsTickerSection = () => {
                 <span className="font-mono text-xs sm:text-sm text-white/60 uppercase tracking-wider">
                   {stat.label}
                 </span>
-                <span className="font-mono text-sm sm:text-base text-white font-medium">
+                <span className="font-mono text-sm sm:text-base text-white font-normal">
                   {stat.value}
                 </span>
                 <span className="font-mono text-xs sm:text-sm text-green-400">

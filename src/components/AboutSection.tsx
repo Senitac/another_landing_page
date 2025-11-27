@@ -19,40 +19,40 @@ export const AboutSection = () => {
 
         {/* Why We Founded */}
         <div className="mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
-            Why we founded <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Senitac</span>
+          <h1 className="text-4xl md:text-5xl font-normal text-white mb-8 text-center">
+            Why we are building <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Senitac</span>
           </h1>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left: Problem */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">The Problem</h2>              
+              <h2 className="text-2xl font-light text-white mb-4">The Problem</h2>
               <div className="text-xl text-white leading-relaxed space-y-4">
                 <p>
-                  Accounting teams spend most of their time <span className="text-orange-400 font-medium">moving data, not making decisions</span> 
+                  Finance teams spend most of their time on <span className="text-orange-400 font-light">repetitive tasks, not strategic decisions</span>.
                 </p>
-                
+
                 <p>
-                  We saw this firsthand: entire finance teams stuck on repetitive tasks instead of strategic work. From reading invoices, re-typing, back-and-forth emails, months-long audits, to reconciling ledgers.  
+                  We saw this firsthand: entire teams stuck chasing invoices, reconciling across disconnected systems, and manually categorizing transactions. Month-end close takes days or weeks when it should take hours.
                 </p>
                 <p>
-                  The result: slow closes, messy books, and exhausted accountants.
+                  The result: slow decision-making, delayed closes, and burned-out finance leaders.
                 </p>
               </div>
             </div>
 
             {/* Right: Solution */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">Our Solution</h2>
+              <h2 className="text-2xl font-light text-white mb-4">Our Solution</h2>
               <div className="text-xl text-white leading-relaxed space-y-4">
                 <p>
-                  Senitac builds <span className="text-orange-400 font-medium">accountant-in-the-loop agents</span> that handle the grunt work. So finance teams can focus on insights, not inputs.
+                  Senitac builds <span className="text-orange-400 font-light">modular AI agents</span> that integrate directly with your existing systems and handle the repetitive work. Finance teams get to focus on analysis, planning, and growth.
                 </p>
                 <p>
-                  We don't layer automation on top of messy data. We <span className="text-orange-400 font-medium">start at the source</span>. Clean, verifiable data leads to instant books and full observability.
+                  We don't force platform replacements. We <span className="text-orange-400 font-light">implement with your team</span>, integrate with your stack (ERP, banking, tools), and custom-build agents for your specific workflows.
                 </p>
                 <p>
-                  With Senitac, <span className="text-orange-400 font-medium">one accountant can manage 20x more clients</span>, with cleaner data and zero manual entry.
+                  The result: <span className="text-orange-400 font-light">faster closes, cleaner data, and finance teams doing strategic work</span> instead of data entry.
                 </p>
               </div>
             </div>
@@ -64,10 +64,9 @@ export const AboutSection = () => {
           <div className="w-full">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 md:p-10">
               <div className="max-w-4xl mx-auto text-center space-y-4">
-                <h2 className="text-3xl font-semibold text-orange-400">Our Mission</h2>
+                <h2 className="text-3xl font-normal text-orange-400">Our Mission</h2>
                 <p className="text-xl text-white leading-relaxed">
-                  Zero-friction finance done by AI agents. Data flows once, stays accurate forever, and every downstream financial task becomes a click so your business can move from hindsight to
-                  <span className="text-orange-400"> real-time decision making.</span>
+                  Transform finance operations with AI agents that handle the mundane so teams can focus on what matters. Every company deserves <span className="text-orange-400">real-time financial visibility</span> and the ability to make strategic decisions without drowning in manual work.
                 </p>
               </div>
             </div>
@@ -76,7 +75,7 @@ export const AboutSection = () => {
 
         {/* Founder Profiles */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold text-orange-400 text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-normal text-orange-400 text-center mb-12">
             The Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -91,8 +90,8 @@ export const AboutSection = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Nitanshu Limbachiya</h3>
-                  <p className="text-white/60 text-xl mb-2">Co-Founder & CEO</p>
+                  <h3 className="text-xl font-normal text-white">Nitanshu Limbachiya</h3>
+                  <p className="text-white/60 font-light text-xl mb-2">Co-Founder & CEO</p>
                   <a
                     href="https://www.linkedin.com/in/nitanshu-limbachiya/"
                     target="_blank"
@@ -103,8 +102,8 @@ export const AboutSection = () => {
                   </a>
                 </div>
               </div>
-              <p className="text-xl text-white/70 leading-relaxed">
-                At Senitac, Nitanshu owns product and agent design. Before founding Senitac, he pursued an MSc in Machine Learning at UCL, conducted multi-agent systems research with DARK Lab and Meta, and shadowed finance teams to redesign month-end around exception-first workflows.
+              <p className="text-xl font-light text-white/70 leading-relaxed">
+                At Senitac, Nitanshu owns product and agent design. Before founding Senitac, he pursued an MSc in Machine Learning at UCL, conducted multi-agent systems research with DARK Lab and Meta, and worked with finance teams to redesign month-end workflows.
               </p>
             </div>
 
@@ -119,8 +118,8 @@ export const AboutSection = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Sebastian Sigurdarson</h3>
-                  <p className="text-white/60 text-xl mb-2">Co-Founder & CTO</p>
+                  <h3 className="text-xl font-normal text-white">Sebastian Sigurdarson</h3>
+                  <p className="text-white/60 font-light text-xl mb-2">Co-Founder & CTO</p>
                   <a                    href="https://www.linkedin.com/in/sebastiansigur/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -130,7 +129,7 @@ export const AboutSection = () => {
                   </a>
                 </div>
               </div>
-              <p className="text-xl text-white/70 leading-relaxed">
+              <p className="text-xl font-light text-white/70 leading-relaxed">
                 Sebastian leads tech at Senitac, from infra to idempotent posting, and audit-ready reconciliation. Before founding Senitac, he pursued an MSc in Machine Learning at UCL, and he was in R&D at Cosine Therapeutics, where he shipped ML-driven data systems used in production.
               </p>
             </div>
@@ -143,7 +142,7 @@ export const AboutSection = () => {
             href="https://calendly.com/nitanshu15/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-normal rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-glow"
           >
             Book a Demo
             <Calendar className="w-5 h-5" />

@@ -10,39 +10,44 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: 'What is Senitac?',
+    question: 'How is this different from Ramp, Brex, or other spend management platforms?',
     answer:
-      "Senitac is a full-stack AI accountancy platform. Our AI agents pull raw data from your bank, email, invoices, and spreadsheets, then automatically categorize, reconcile, and maintain your books in real-time. All with an expert accountant-in-the-loop.",
+      "Ramp and Brex are card-first platforms that require you to switch payment methods and lock you into their ecosystem. Senitac integrates with your existing systems—your current ERP, banking relationships, and workflows stay intact. We're implementation partners, not a platform vendor forcing replacement.",
   },
   {
-    question: 'How is Senitac different from QuickBooks or Xero?',
+    question: 'Do we need to replace our existing accounting system?',
     answer:
-      "Traditional accounting software requires manual data entry and monthly reconciliation. Senitac's AI agents do the work for you, pulling data directly from sources, categorizing automatically, and reconciling continuously. We eliminate the manual work entirely.",
+      "No. Senitac agents integrate with your current ERP (QuickBooks, Xero, NetSuite, SAP, etc.). We connect upstream to banks, payment processors, and operational systems, then feed clean, reconciled data into your existing ledger. No rip-and-replace required.",
   },
   {
-    question: 'What do you integrate with today?',
+    question: 'What systems do you integrate with?',
     answer:
-      "Today: bank feeds (where OAuth is available), email (Gmail/Outlook), cloud storage (Drive/Dropbox), and spreadsheets/CSV. Need a specific system? We can scope it during onboarding.",
+      "We connect to major ERPs (QuickBooks, Xero, NetSuite, SAP), banking systems via secure OAuth, payment processors (Stripe, PayPal), and operational tools. Industry-specific integrations include Shopify, Amazon Seller Central (e-commerce), construction management software, and time-tracking systems for professional services. Custom integrations are built during implementation.",
   },
   {
-    question: 'How long does setup take?',
+    question: 'How long does implementation take?',
     answer:
-      "We onboard alongside your team. Typical steps: connect bank/email, configure your chart of accounts, and backfill recent activity. Most companies are up and running within 2-3 weeks.",
+      "Average implementation is 3-4 weeks from kickoff to first agents live. We follow a three-phase approach: (1) Assess operations and map workflows, (2) Build and configure agents with your team, (3) Deploy with phased rollout and monitoring. Timeline varies based on complexity and number of agents.",
   },
   {
-    question: 'Is my data secure?',
+    question: 'How do you ensure accuracy? What if an agent makes a mistake?',
     answer:
-      "Yes. We protect your data when it’s sent and when it’s stored, limit access to authorised roles, and keep automatic backups. We don’t use your data to train public models.",
+      "Every agent action goes through human-in-the-loop oversight. Chartered accountants (ACA/ACCA) review exceptions, approve transactions above thresholds, and maintain controls. All actions have full audit trails with source evidence. You maintain final approval rights, and agents learn from corrections to improve accuracy over time.",
   },
   {
-    question: 'Do I still need an accountant?',
+    question: 'Can I pick specific agents or do I need the full platform?',
     answer:
-      "Yes. Senitac removes the repetitive work, and a chartered accountant (ACA/ACCA) reviews exceptions and signs off where required. Your accountant (or ours, if engaged) handles statutory filings and tax.",
+      "You can pick specific agents that address your pain points. Many clients start with 2-3 agents (e.g., Invoice Processing, Bank Reconciliation, Cash Forecasting) and expand from there. We also offer pre-configured industry templates (e-commerce, SaaS, construction, professional services) that bundle commonly needed agents for your vertical.",
   },
   {
-    question: 'What does Senitac cost?',
+    question: 'Is my financial data secure?',
     answer:
-      "Pricing is based on transaction volume and complexity. Startups and SMB plans are available; contact us and we’ll scope a plan that fits your workload.",
+      "Yes. We use bank-grade encryption for data in transit and at rest, and provide immutable audit trails. Your data stays in your control—we never train models on proprietary client data or share it with third parties. All integrations use secure OAuth, and access is limited by role-based permissions.",
+  },
+  {
+    question: 'What does pricing look like?',
+    answer:
+      "Pricing is based on which agents you deploy, transaction volume, and implementation scope. Most finance teams see ROI within the first quarter through time savings and error reduction. Contact us for a custom quote based on your specific operations—we'll map your workflows and provide transparent pricing before any commitment.",
   },
 ]
 
@@ -61,7 +66,7 @@ const FAQAccordionItem = ({
         onClick={onClick}
         className="w-full py-4 px-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors group"
       >
-        <span className="text-lg md:text-xl font-medium text-white pr-8">{item.question}</span>
+        <span className="text-lg md:text-xl font-normal text-white pr-8">{item.question}</span>
         <ChevronDown
           className={`w-5 h-5 text-white/60 transition-transform duration-200 flex-shrink-0 ${
             isOpen ? 'rotate-180' : ''
@@ -75,7 +80,7 @@ const FAQAccordionItem = ({
       >
         <div className="overflow-hidden">
           <div className="px-5 pb-4">
-            <p className="text-lg md:text-base text-white/80 leading-relaxed">{item.answer}</p>
+            <p className="text-lg md:text-base font-light text-white/80 leading-relaxed">{item.answer}</p>
           </div>
         </div>
       </div>
@@ -91,13 +96,10 @@ export const FAQSection = () => {
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-sm text-orange-300 mb-4">
-            FAQ
-          </div>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-3">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Questions?</span> Answered
+          <h2 className="text-3xl md:text-4xl font-normal text-white mb-4">
+            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Questions?</span> Answered
           </h2>
-          <p className="text-base md:text-lg text-white/70">Everything you need to know</p>
+          <p className="text-base md:text-lg font-light text-white/70">Everything you need to know</p>
         </div>
 
         {/* FAQ Accordion */}
@@ -114,12 +116,12 @@ export const FAQSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-10">
-          <p className="text-lg md:text-xl text-white/70 mb-4">Still have questions? We're here to help.</p>
+          <p className="text-lg md:text-xl font-light text-white/70 mb-4">Still have questions? We're here to help.</p>
           <a
             href="https://calendly.com/nitanshu15/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 hover:border-orange-500/50 text-white font-medium text-xl rounded-lg transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 hover:border-orange-500/50 text-white font-normal text-xl rounded-lg transition-all duration-300"
           >
             Book a Demo
           </a>

@@ -28,7 +28,7 @@ export const ProblemSection = () => {
         {/* Header */}
         <div className="mx-auto px-4 md:px-12 pb-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4 leading-tight">
               There's a <span className="bg-gradient-primary bg-clip-text text-transparent">global shortage</span> of accountants
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
@@ -49,7 +49,7 @@ export const ProblemSection = () => {
                       <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-lg flex items-center justify-center">
                         <problem.icon className="w-5 h-5 md:w-6 md:h-6 text-white/70" />
                       </div>
-                      <h3 className="text-lg md:text-xl font-semibold text-white pt-2">
+                      <h3 className="text-lg md:text-xl font-normal text-white pt-2">
                         {problem.title}
                       </h3>
                     </div>

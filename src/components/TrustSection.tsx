@@ -1,69 +1,114 @@
-import { Shield, Lock, Plug, Headphones } from "lucide-react";
+// TrustSection
+// Displays metrics, social proof, and trust signals (no icons)
 
 export const TrustSection = () => {
-  const trustItems = [
+  const metrics = [
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level 256-bit encryption and SOC 2 Type II certified infrastructure.",
+      value: "75%",
+      label: "Faster Month-End Close",
+      description: "Average time reduction from manual reconciliation to automated close"
     },
     {
-      icon: Lock,
-      title: "Privacy First",
-      description: "GDPR compliant. Your data stays yours and is never used to train public models.",
+      value: "99.2%",
+      label: "Auto-Match Rate",
+      description: "Transactions matched automatically without manual intervention"
     },
     {
-      icon: Plug,
-      title: "Easy Integrations",
-      description: "Works with QuickBooks, Xero, NetSuite, and direct connections to major banks.",
+      value: "3-4 weeks",
+      label: "Implementation Time",
+      description: "From kickoff to first agents live in production"
     },
     {
-      icon: Headphones,
-      title: "Dedicated Support",
-      description: "White-glove onboarding and 24/7 support for enterprise customers.",
-    },
+      value: "24/7",
+      label: "Continuous Processing",
+      description: "Agents work around the clock, not just at month-end"
+    }
+  ];
+
+  const complianceItems = [
+    "GDPR Ready",
+    "Bank-Grade Encryption",
+    "Audit-Ready Evidence Trails"
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="trust" className="py-20 relative">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Enterprise-grade
-            </span> security
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Built for scale, designed for trust
-          </p>
-        </div>
-
-        {/* Trust Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {trustItems.map((item, index) => (
+        {/* Metrics Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {metrics.map((metric, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300 group"
+              className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-center"
             >
-              <div className="mb-4 w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
-                <item.icon className="w-5 h-5 text-orange-500" />
+              <div className="text-3xl md:text-4xl font-normal bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent mb-2">
+                {metric.value}
               </div>
-              <h3 className="text-base font-semibold text-white mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-white/70 leading-relaxed">
-                {item.description}
-              </p>
+              <div className="text-base md:text-lg font-normal text-white mb-2">
+                {metric.label}
+              </div>
+              <div className="text-sm font-light text-white/60 leading-relaxed">
+                {metric.description}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Additional trust indicators */}
-        <div className="mt-16 text-center">
-          <p className="text-sm text-white/60 mb-6">
-            Trusted by forward-thinking companies
+        {/* Divider */}
+        <div className="relative mb-16">
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-white/10"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <span className="px-6 bg-black text-sm text-white/50 uppercase tracking-wide font-normal">
+              Security & Compliance
+            </span>
+          </div>
+        </div>
+
+        {/* Compliance Section */}
+        <div className="text-center max-w-4xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-normal text-white mb-6">
+            Enterprise-Grade Security
+          </h3>
+          <p className="text-base md:text-lg font-light text-white/70 leading-relaxed mb-8">
+            Your financial data is your most sensitive asset. We maintain the highest security standards and provide complete audit trails for every transaction.
           </p>
+
+          {/* Compliance badges */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {complianceItems.map((item, index) => (
+              <div
+                key={index}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-normal text-white/80"
+              >
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          {/* Additional trust signals */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="p-6 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="text-lg font-normal text-white mb-2">Data Ownership</h4>
+              <p className="text-sm font-light text-white/70 leading-relaxed">
+                Your data stays in your control. We never train models on your proprietary information or share it with third parties.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="text-lg font-normal text-white mb-2">Immutable Audit Trails</h4>
+              <p className="text-sm font-light text-white/70 leading-relaxed">
+                Every agent action is logged with full evidence chains. Export complete audit packages with one click.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl bg-white/5 border border-white/10">
+              <h4 className="text-lg font-normal text-white mb-2">Human Oversight</h4>
+              <p className="text-sm font-light text-white/70 leading-relaxed">
+                Chartered accountants (ACA/ACCA) review agent actions, maintain controls, and provide sign-off where required.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
